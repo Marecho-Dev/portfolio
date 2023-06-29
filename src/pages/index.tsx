@@ -50,11 +50,11 @@ const Home: NextPage = () => {
             <h1 className="pb-4 text-6xl  text-slate-600">Manga Mood</h1>
             <div className="flex h-80 w-[100%]">
               <div className="z-10 h-[90%] w-[50%]">
-                <div className="relative overflow-hidden rounded-sm">
+                <div className="relative h-full w-full rounded-sm">
                   <img
                     src="/images/MM.jpg"
                     alt="Manga Mood"
-                    style={{ width: "100%", height: "100%" }}
+                    className="h-full w-full object-cover"
                   />
                   <img
                     src="/images/Animation.gif"
@@ -78,21 +78,47 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="mx-[20%] pt-10 ">
-            <h1 className="pb-2 text-6xl  text-slate-600">
+            <h1 className="pb-4 text-6xl  text-slate-600">
               Manga Rec Restful API
             </h1>
-            <p className="text-slate-600">
-              Restful API created using flask and python in order to perform
-              machine learning on an input user to find mangas they should read
-              next
-            </p>
+            <div className="flex h-80 w-[100%]">
+              <div className="z-10 h-[90%] w-[50%]">
+                <div className="relative h-full w-full rounded-sm">
+                  <img
+                    src="/images/MM-API.jpg"
+                    alt="Manga Mood"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="flex h-[100%] w-[50%] items-end">
+                <p className="ml-[-10%] h-[90%] w-[120%] rounded-sm bg-slate-300 pb-[5%] pl-[15%] pr-[5%] pt-[5%] text-slate-600">
+                  Restful API created using flask and python in order to perform
+                  machine learning on an input user to find mangas they should
+                  read next
+                </p>
+              </div>
+            </div>
           </div>
           <div className="mx-[20%] pt-10 ">
-            <h1 className="pb-2 text-6xl  text-slate-600">Metal General</h1>
-            <p className="text-slate-600">
-              ERP Built for the company Metal General which is built upon the T3
-              stack using supabase
-            </p>
+            <h1 className="pb-4 text-6xl  text-slate-600">Metal General</h1>
+            <div className="flex h-80 w-[100%]">
+              <div className="z-10 h-[90%] w-[50%]">
+                <div className="relative h-full w-full rounded-sm">
+                  <img
+                    src="/images/metal-general.jpg"
+                    alt="Manga Mood"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="flex h-[100%] w-[50%] items-end">
+                <p className="ml-[-10%] h-[90%] w-[120%] rounded-sm bg-slate-300 pb-[5%] pl-[15%] pr-[5%] pt-[5%] text-slate-600">
+                  ERP Built for the company Metal General which is built upon
+                  the T3 stack using supabase
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
