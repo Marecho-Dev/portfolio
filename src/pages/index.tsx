@@ -125,9 +125,26 @@ const Home: NextPage = () => {
         <section>
           {" "}
           <div className="mx-[20%] pt-10 ">
-            <h1 className="pb-2 text-6xl  text-slate-600">Contact us</h1>
-            <h2 className="pb-3 text-3xl text-slate-500">Name</h2>
-            <p className="text-slate-600"></p>
+            <h1 className="pb-5 text-6xl  text-slate-600">Get in touch.</h1>
+            <div className="flex h-96 w-96 flex-col">
+              <input
+                placeholder="Name"
+                className=" rounder-sm mb-10 h-full w-full bg-slate-200 py-5 pl-2 text-xl "
+                type="text"
+              />
+              <input
+                placeholder="Email"
+                className=" rounder-sm mb-10 h-full w-full bg-slate-200 py-5 pl-2 text-xl "
+                type="text"
+              />
+              <input
+                placeholder="Message"
+                className=" rounder-sm mb-10 h-full w-full bg-slate-200 py-5 pl-2 text-xl "
+                type="textarea"
+              />
+              <button className="bg-slate-500">Submit</button>
+            </div>
+            <div className="h-24"></div>>
           </div>
         </section>
       </main>
