@@ -50,15 +50,29 @@ const Home: NextPage = () => {
             <h1 className="pb-4 text-6xl  text-slate-600">Manga Mood</h1>
             <div className="flex h-80 w-[100%]">
               <div className="z-10 h-[90%] w-[50%]">
-                <img
-                  src="/images/Manga-Mood.jpg"
-                  alt="Manga Mood"
-                  style={{ width: "100%", height: "100%" }}
-                />
+                <div className="relative overflow-hidden rounded-sm">
+                  <img
+                    src="/images/MM.jpg"
+                    alt="Manga Mood"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                  <img
+                    src="/images/Animation.gif"
+                    alt="Animated GIF"
+                    className="absolute left-0 top-0 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </div>
               </div>
               <div className="flex h-[100%] w-[50%] items-end">
-                <p className="ml-[-10%] h-[90%] w-[120%] bg-slate-300 pl-[13%] text-slate-600">
-                  Manga recommendation site built using the T3 stack
+                <p className="ml-[-10%] h-[90%] w-[120%] rounded-sm bg-slate-300 pb-[5%] pl-[15%] pr-[5%] pt-[5%] text-slate-600">
+                  Manga Mood is a full-stack SPA built using the T3 stack. It
+                  utilizes Machine Learning via a RESTful API in order to
+                  generate manga recommendations by comparing what you've rated
+                  on myanimelist to what other users have rated. If you don't
+                  have a myanimelist username, please use 'marecho' to test it
+                  out! Still a work in progress, but manga recommendations is
+                  functioning!
                 </p>
               </div>
             </div>
