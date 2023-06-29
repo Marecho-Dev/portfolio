@@ -1,6 +1,4 @@
 import { type NextPage } from "next";
-import { signIn, signOut, useSession } from "next-auth/react";
-import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
   return (
@@ -142,9 +140,11 @@ const Home: NextPage = () => {
                 className=" rounder-sm mb-10 h-full w-full bg-slate-200 py-5 pl-2 text-xl "
                 type="textarea"
               />
-              <button className="bg-slate-500 rounded-md w-[25%] text-slate-100 py-3">Submit</button>
+              <button className="w-[25%] rounded-md bg-slate-500 py-3 text-slate-100">
+                Submit
+              </button>
             </div>
-            <div className="h-24"></div>>
+            <div className="h-24"></div>
           </div>
         </section>
       </main>
