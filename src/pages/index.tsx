@@ -3,16 +3,45 @@ import { type NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div className="h-full h-screen bg-slate-900">
       <header className="flex h-16 items-center justify-end bg-zinc-200 pr-5 text-slate-600">
-        <nav>
-          <ul className="flex gap-10">
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
-          </ul>
+        <nav className="flex w-full">
+          <div className="pl-5 w-[15%]">Marek Staszkiewicz</div>
+          <div className="w-full flex justify-end">
+            <ul className="flex gap-5">
+              <li>About</li>
+              <li>Projects</li>
+              <li>Contact</li>
+            </ul>
+          </div>
         </nav>
       </header>
+      <section className="flex h-full w-full bg-slate-300">
+        <div className="flex mx-[20%] mt-[10%]">
+          <div className="flex-col w-[60%]">
+          <h1 className="pb-2 text-6xl  text-slate-600">Hi, I'm Marek</h1>
+          <h2 className="pb-3 text-3xl text-slate-500">Full Stack Developer</h2>
+          <p className="w-[60%] text-slate-600">
+            Currently a Sr. Technology Analyst at AutoNation. Passionate about
+            react, machine learning, music and manga.
+          </p>
+          <div className="flex w-[0%] gap-2 pt-5">
+            <button className="bg-slate-900 p-3 text-slate-300">Contact</button>
+            <button className="bg-slate-900 p-3 text-slate-300">Github</button>
+            <button className="bg-slate-900 p-3 text-slate-300">
+              LinkedIn
+            </button>
+            </div>
+          </div>
+          <div className= "mt-[-1%] ml-[-8%] w-[30%] h-[50%]">
+          <img
+                    src="/images/Marek.jpg"
+                    alt="Manga Mood"
+                    className="h-full w-full object-cover "
+                  />
+        </div>
+        </div>
+      </section>
 
       <main>
         <section>
@@ -149,7 +178,7 @@ const Home: NextPage = () => {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 };
 
