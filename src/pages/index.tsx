@@ -49,6 +49,12 @@ const Home: NextPage = () => {
                   alt="Your SVG"
                 />
               </button>
+              <button className="flex items-end aspect-square h-16 w-16  p-3 text-slate-500">
+                <img
+                  src={"../../../images/resume.svg"}
+                  alt="Your SVG"
+                />
+              </button>
             </div>
           </div>
         </div>
