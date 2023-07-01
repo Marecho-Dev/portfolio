@@ -6,7 +6,7 @@ const Home: NextPage = () => {
     <div className="h-full h-screen bg-slate-900">
       <header className="flex h-16 items-center justify-end bg-zinc-200 pr-5 text-slate-600">
         <nav className="flex w-full">
-          <div className="flex gap-1 items-center w-[30%] pl-5">
+          <div className="flex w-[30%] items-center gap-1 pl-5">
             <div>Marek Staszkiewicz</div>
           </div>
           <div className="flex w-full justify-end">
@@ -37,14 +37,17 @@ const Home: NextPage = () => {
               react, machine learning, music and manga.
             </p>
             <div className="flex w-[0%] gap-2 pt-5">
-              <button className="bg-slate-900 p-3 text-slate-300">
-                Contact
+              <button className="aspect-square h-16 w-16 p-3 text-slate-500">
+                <img src={"../../../images/github.svg"} alt="Your SVG" />
               </button>
-              <button className="bg-slate-900 p-3 text-slate-300">
-                Github
+              <button className="aspect-square h-16 w-16  p-3 text-slate-500">
+                <img src={"../../../images/in.svg"} alt="Your SVG" />
               </button>
-              <button className="bg-slate-900 p-3 text-slate-300">
-                LinkedIn
+              <button className="flex items-end aspect-square h-16 w-16  p-3 text-slate-500">
+                <img
+                  src={"../../../images/mail.svg"}
+                  alt="Your SVG"
+                />
               </button>
             </div>
           </div>
@@ -78,6 +81,34 @@ const Home: NextPage = () => {
               innovative applications that bridge the gap between data analytics
               and user experiences.
             </p>
+            <div className="mt-[5%] w-full border-t border-gray-300"></div>
+            <div className="flex gap-4">
+              <div className="my-5 h-24 w-24 ">
+                <img src={"../../../images/sql.svg"} alt="Your SVG" />
+              </div>
+              <div className="my-5 h-24 w-24 ">
+                <img src={"../../../images/js.svg"} alt="Your SVG" />
+              </div>
+              <div className="my-5 h-24 w-24 ">
+                <img src={"../../../images/react.svg"} alt="Your SVG" />
+              </div>
+              <div className="my-5 h-24 w-24 ">
+                <img src={"../../../images/html.svg"} alt="Your SVG" />
+              </div>
+              <div className="my-5 h-24 w-24 ">
+                <img src={"../../../images/css.svg"} alt="Your SVG" />
+              </div>
+              <div className="my-5 h-24 w-24 ">
+                <img src={"../../../images/tailwind.svg"} alt="Your SVG" />
+              </div>
+              <div className="my-5 h-24 w-24 ">
+                <img src={"../../../images/typescript.svg"} alt="Your SVG" />
+              </div>
+              <div className="my-5 h-24 w-24 ">
+                <img src={"../../../images/node.svg"} alt="Your SVG" />
+              </div>
+            </div>
+            <div className="w-full border-t border-gray-300"></div>
           </div>
         </section>
 
