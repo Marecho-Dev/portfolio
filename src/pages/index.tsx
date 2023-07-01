@@ -37,19 +37,19 @@ const Home: NextPage = () => {
               react, machine learning, music and manga.
             </p>
             <div className="flex w-[0%] gap-2 pt-5">
-              <button className="aspect-square h-16 w-16 p-3 text-slate-500">
-                <img src={"../../../images/github.svg"} alt="Your SVG" />
+              <button className="aspect-square h-10 w-10 text-slate-500">
+                <img src={"../../../images/github3.svg"} alt="Your SVG" />
               </button>
-              <button className="aspect-square h-16 w-16  p-3 text-slate-500">
-                <img src={"../../../images/in.svg"} alt="Your SVG" />
+              <button className="aspect-square h-10 w-10 text-slate-500">
+                <img src={"../../../images/linkedin.svg"} alt="Your SVG" />
               </button>
-              <button className="flex items-end aspect-square h-16 w-16  p-3 text-slate-500">
+              <button className="flex items-end aspect-square h-10 w-10 text-slate-500">
                 <img
-                  src={"../../../images/mail.svg"}
+                  src={"../../../images/mail2.svg"}
                   alt="Your SVG"
                 />
               </button>
-              <button className="flex items-end aspect-square h-16 w-16  p-3 text-slate-500">
+              <button className="flex items-end aspect-square h-10 w-10 text-slate-500">
                 <img
                   src={"../../../images/resume.svg"}
                   alt="Your SVG"
