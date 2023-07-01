@@ -16,12 +16,19 @@ const Home: NextPage = () => {
           </div>
         </nav>
       </header>
-      <section className="flex h-full w-full bg-slate-300">
-        <div className="flex mx-[20%] mt-[10%]">
-          <div className="flex-col w-[60%]">
+      <section className="flex gap-10 h-full w-full bg-slate-300">
+      <div className= "ml-[20%] mt-[10%] w-[30%] h-[50%]">
+          <img
+                    src="/images/Marek.jpg"
+                    alt="Manga Mood"
+                    className="h-full w-full object-cover"
+                  />
+        </div>
+        <div className="flex mr-[20%] mt-[13%]">
+          <div className="flex-col w-96">
           <h1 className="pb-2 text-6xl  text-slate-600">Hi, I'm Marek</h1>
           <h2 className="pb-3 text-3xl text-slate-500">Full Stack Developer</h2>
-          <p className="w-[60%] text-slate-600">
+          <p className="w-[100%] text-slate-600">
             Currently a Sr. Technology Analyst at AutoNation. Passionate about
             react, machine learning, music and manga.
           </p>
@@ -33,13 +40,7 @@ const Home: NextPage = () => {
             </button>
             </div>
           </div>
-          <div className= "mt-[-1%] ml-[-8%] w-[30%] h-[50%]">
-          <img
-                    src="/images/Marek.jpg"
-                    alt="Manga Mood"
-                    className="h-full w-full object-cover "
-                  />
-        </div>
+          
         </div>
       </section>
 
