@@ -120,83 +120,117 @@ const Home: NextPage = () => {
           <div className="text-2xl">Projects</div>
           <div className="mt-1 w-full border-t border-gray-900"></div>
         </div>
-        <section className="bg-slate-300">
-          <div className="mx-[20%] pt-10 ">
-            <h1 className="pb-4 text-6xl  text-slate-600">Manga Mood</h1>
-            <div className="flex h-80 w-[100%]">
-              <div className="z-10 h-[90%] w-[50%]">
-                <div className="relative h-full w-full rounded-sm">
-                  <img
-                    src="/images/MM.jpg"
-                    alt="Manga Mood"
-                    className="h-full w-full object-cover"
-                  />
-                  <img
-                    src="/images/Animation.gif"
-                    alt="Animated GIF"
-                    className="absolute left-0 top-0 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                </div>
+        <section className="min-h-screen w-full bg-slate-300">
+          {/* this next part is the project with card on right side */}
+          <div className="w-80% bg-slate-3-- mx-[20%] flex h-[50%] pt-10">
+            <div className="h-full w-1/2 bg-white">
+              <div className="relative h-full w-full rounded-sm">
+                <img
+                  src="/images/MM.jpg"
+                  alt="Manga Mood"
+                  className="h-full w-full object-cover"
+                />
+                <img
+                  src="/images/Animation.gif"
+                  alt="Animated GIF"
+                  className="absolute left-0 top-0 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
+                  style={{ width: "100%", height: "100%" }}
+                />
               </div>
-              <div className="flex h-[100%] w-[50%] items-end">
-                <p className="ml-[-10%] h-[90%] w-[120%] rounded-sm bg-slate-300 pb-[5%] pl-[15%] pr-[5%] pt-[5%] text-slate-600">
-                  Manga Mood is a full-stack SPA built using the T3 stack. It
-                  utilizes Machine Learning via a RESTful API in order to
-                  generate manga recommendations by comparing what you've rated
-                  on myanimelist to what other users have rated. If you don't
-                  have a myanimelist username, please use 'marecho' to test it
-                  out! Still a work in progress, but manga recommendations is
-                  functioning!
-                </p>
+            </div>
+            <div className="h-full w-1/3 flex-col">
+              <div className="flex items-center justify-end pr-5 text-3xl">
+                <h1>Manga Mood</h1>
+              </div>
+              <div className="mt-3 w-full bg-zinc-800 p-5 text-slate-200">
+                Manga Mood is a full-stack SPA built using the T3 stack. It
+                utilizes Machine Learning via a RESTful API in order to generate
+                manga recommendations by comparing what you've rated on
+                myanimelist to what other users have rated. If you don't have a
+                myanimelist username, please use 'marecho' to test it out! Still
+                a work in progress, but manga recommendations is functioning!
+              </div>
+              <div className="flex items-center justify-end gap-2  text-lg">
+                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
+                  React
+                </h1>
+                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
+                  TypeScript
+                </h1>
+                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
+                  Tailwind
+                </h1>
               </div>
             </div>
           </div>
-          <div className="mx-[20%] pt-10 ">
-            <h1 className="pb-4 text-6xl  text-slate-600">
-              Manga Rec Restful API
-            </h1>
-            <div className="flex h-80 w-[100%]">
-              <div className="z-10 h-[90%] w-[50%]">
-                <div className="relative h-full w-full rounded-sm">
-                  <img
-                    src="/images/MM-API.jpg"
-                    alt="Manga Mood"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
+          {/* this is project with card on left side */}
+          <div className="w-80% bg-slate-3-- mx-[20%] flex h-[50%] pt-10">
+            <div className="h-full w-1/3 flex-col">
+              <div className="flex items-center justify-end pr-5 text-3xl">
+                <h1>Manga Rec Restful API</h1>
               </div>
-              <div className="flex h-[100%] w-[50%] items-end">
-                <p className="ml-[-10%] h-[90%] w-[120%] rounded-sm bg-slate-300 pb-[5%] pl-[15%] pr-[5%] pt-[5%] text-slate-600">
-                  Restful API created using flask and python in order to perform
-                  machine learning on an input user to find mangas they should
-                  read next
-                </p>
+              <div className="mt-3 h-1/2 w-full bg-zinc-800 p-5 text-slate-200">
+                Restful API created using flask and python in order to perform
+                machine learning on an input user to find mangas they should
+                read next
+              </div>
+              <div className="flex items-center justify-end gap-2  text-lg">
+                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
+                  Pyton
+                </h1>
+                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
+                  Flask
+                </h1>
+                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
+                  Pandas
+                </h1>
+              </div>
+            </div>
+            <div className="h-full w-1/2 bg-white">
+              <div className="h-full w-full rounded-sm">
+                <img
+                  src="/images/MM-API.jpg"
+                  alt="Manga Mood"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
           </div>
-          <div className="mx-[20%] pt-10 ">
-            <h1 className="pb-4 text-6xl  text-slate-600">Metal General</h1>
-            <div className="flex h-80 w-[100%]">
-              <div className="z-10 h-[90%] w-[50%]">
-                <div className="relative h-full w-full rounded-sm">
-                  <img
-                    src="/images/metal-general.jpg"
-                    alt="Manga Mood"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
+          {/* this is end of project with card on left side */}
+          <div className="w-80% mx-[20%] flex h-[50%] flex-grow bg-slate-300 pt-10">
+            <div className=" h-full w-1/2 bg-white">
+              <div className="h-full w-full rounded-sm">
+                <img
+                  src="/images/metal-general.jpg"
+                  alt="Manga Mood"
+                  className="h-full w-full object-cover"
+                />
               </div>
-              <div className="flex h-[100%] w-[50%] items-end">
-                <p className="ml-[-10%] h-[90%] w-[120%] rounded-sm bg-slate-300 pb-[5%] pl-[15%] pr-[5%] pt-[5%] text-slate-600">
-                  ERP Built for the company Metal General which is built upon
-                  the T3 stack using supabase
-                </p>
+            </div>
+            <div className="h-full w-1/3 flex-col">
+              <div className="flex items-center justify-end pr-5 text-3xl">
+                <h1>Metal General</h1>
+              </div>
+              <div className="mt-3 h-1/2 w-full bg-zinc-800 p-5 text-slate-200">
+                ERP Built for the company Metal General which is built upon the
+                T3 stack using supabase
+              </div>
+              <div className="flex items-center justify-end gap-2  text-lg">
+                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
+                  React
+                </h1>
+                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
+                  TypeScript
+                </h1>
+                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
+                  Tailwind
+                </h1>
               </div>
             </div>
           </div>
+          {/* this is end of project with card on right side */}
         </section>
-        <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%]">
+        <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%] pt-10">
           <div className="mt-5">03</div>
           <div className="text-2xl">Contact</div>
           <div className="mt-1 w-full border-t border-gray-900"></div>
