@@ -3,7 +3,7 @@ import { type NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="h-full h-screen bg-slate-900">
+    <div className="h-screen bg-slate-900">
       <header className="flex h-16 items-center justify-end bg-zinc-200 pr-5 text-slate-600">
         <nav className="flex w-full">
           <div className="flex w-[30%] items-center gap-1 pl-5">
@@ -43,17 +43,11 @@ const Home: NextPage = () => {
               <button className="aspect-square h-10 w-10 text-slate-500">
                 <img src={"../../../images/linkedin.svg"} alt="Your SVG" />
               </button>
-              <button className="flex items-end aspect-square h-10 w-10 text-slate-500">
-                <img
-                  src={"../../../images/mail2.svg"}
-                  alt="Your SVG"
-                />
+              <button className="flex aspect-square h-10 w-10 items-end text-slate-500">
+                <img src={"../../../images/mail2.svg"} alt="Your SVG" />
               </button>
-              <button className="flex items-end aspect-square h-10 w-10 text-slate-500">
-                <img
-                  src={"../../../images/resume.svg"}
-                  alt="Your SVG"
-                />
+              <button className="flex aspect-square h-10 w-10 items-end text-slate-500">
+                <img src={"../../../images/resume.svg"} alt="Your SVG" />
               </button>
             </div>
           </div>
@@ -61,7 +55,12 @@ const Home: NextPage = () => {
       </section>
 
       <main>
-        <section>
+        <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%]">
+          <div className="mt-5">01</div>
+          <div className="text-2xl">About</div>
+          <div className="mt-1 w-full border-t border-gray-900"></div>
+        </div>
+        <section className="flex h-full w-full gap-10 bg-slate-300">
           <div className="mx-[20%] pt-10 ">
             <h1 className="pb-2 text-6xl  text-slate-600">
               Marek Staszkiewicz
@@ -69,7 +68,7 @@ const Home: NextPage = () => {
             <h2 className="pb-3 text-3xl text-slate-500">
               Full Stack Developer
             </h2>
-            <p className="text-slate-600">
+            <p className="w-1/2 text-slate-600">
               As a Sr. Technology Analyst transitioning into the Full Stack
               Developer realm, I bring a unique set of skills and experience.
               With a degree in statistics, I have a solid foundation in data
@@ -87,7 +86,7 @@ const Home: NextPage = () => {
               innovative applications that bridge the gap between data analytics
               and user experiences.
             </p>
-            <div className="mt-[5%] w-full border-t border-gray-300"></div>
+
             <div className="flex gap-4">
               <div className="my-5 h-24 w-24 ">
                 <img src={"../../../images/sql.svg"} alt="Your SVG" />
@@ -114,11 +113,14 @@ const Home: NextPage = () => {
                 <img src={"../../../images/node.svg"} alt="Your SVG" />
               </div>
             </div>
-            <div className="w-full border-t border-gray-300"></div>
           </div>
         </section>
-
-        <section>
+        <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%]">
+          <div className="mt-5">02</div>
+          <div className="text-2xl">Projects</div>
+          <div className="mt-1 w-full border-t border-gray-900"></div>
+        </div>
+        <section className="bg-slate-300">
           <div className="mx-[20%] pt-10 ">
             <h1 className="pb-4 text-6xl  text-slate-600">Manga Mood</h1>
             <div className="flex h-80 w-[100%]">
@@ -194,8 +196,12 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-
-        <section>
+        <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%]">
+          <div className="mt-5">03</div>
+          <div className="text-2xl">Contact</div>
+          <div className="mt-1 w-full border-t border-gray-900"></div>
+        </div>
+        <section className="bg-slate-300">
           {" "}
           <div className="mx-[20%] pt-10 ">
             <h1 className="pb-5 text-6xl  text-slate-600">Get in touch.</h1>
