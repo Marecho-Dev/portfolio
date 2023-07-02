@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           <div className="text-2xl">About</div>
           <div className="mt-1 w-full border-t border-gray-900"></div>
         </div>
-        <section className="flex h-full w-full gap-10 bg-slate-300">
+        <section className="flex min-h-screen w-full gap-10 bg-slate-300">
           <div className="mx-[20%] pt-10 ">
             <h1 className="pb-2 text-6xl  text-slate-600">
               Marek Staszkiewicz
@@ -113,10 +113,16 @@ const Home: NextPage = () => {
                 <img src={"../../../images/node.svg"} alt="Your SVG" />
               </div>
             </div>
+            <h1 className="mt-10 pb-2 text-6xl  text-slate-600">Experience</h1>
+            <ul>
+              <li>Sr. Technology Analyst</li>
+              <li>Technology Analyst</li>
+              <li>Product Data Analyst</li>
+            </ul>
           </div>
         </section>
         <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%]">
-          <div className="mt-5">02</div>
+          <div className="mt-5 text-slate-600">02</div>
           <div className="text-2xl">Projects</div>
           <div className="mt-1 w-full border-t border-gray-900"></div>
         </div>
@@ -235,27 +241,27 @@ const Home: NextPage = () => {
           <div className="text-2xl">Contact</div>
           <div className="mt-1 w-full border-t border-gray-900"></div>
         </div>
-        <section className="bg-slate-300">
+        <section className="w-full bg-slate-300 ">
           {" "}
           <div className="mx-[20%] pt-10 ">
-            <h1 className="pb-5 text-6xl  text-slate-600">Get in touch.</h1>
-            <div className="flex h-96 w-96 flex-col">
+            <h1 className="pb-10 text-6xl  text-slate-600">Get in touch.</h1>
+            <div className="flex h-96 w-full flex-col">
               <input
                 placeholder="Name"
-                className=" rounder-sm mb-10 h-full w-full bg-slate-200 py-5 pl-2 text-xl "
+                className=" rounder-sm mb-10 w-1/3 bg-slate-200 py-2 pl-2 text-lg "
                 type="text"
               />
               <input
                 placeholder="Email"
-                className=" rounder-sm mb-10 h-full w-full bg-slate-200 py-5 pl-2 text-xl "
+                className=" rounder-sm mb-10  w-1/3 bg-slate-200 py-2 pl-2 text-lg "
                 type="text"
               />
-              <input
+              <textarea
                 placeholder="Message"
-                className=" rounder-sm mb-10 h-full w-full bg-slate-200 py-5 pl-2 text-xl "
-                type="textarea"
-              />
-              <button className="w-[25%] rounded-md bg-slate-500 py-3 text-slate-100">
+                className="text-md min-h-1/2 w-1/3 resize-y rounded-sm bg-slate-200 py-2 pl-2"
+              ></textarea>
+
+              <button className="mt-5 w-[6%] rounded-md bg-slate-500 py-2 text-slate-100">
                 Submit
               </button>
             </div>
