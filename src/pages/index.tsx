@@ -2,6 +2,17 @@
 import { type NextPage } from "next";
 
 const Home: NextPage = () => {
+  const skills = [
+    "MySQL",
+    "Javascript",
+    "React",
+    "HTML",
+    "CSS",
+    "Tailwind",
+    "TypeScript",
+    "Node",
+    "Python",
+  ];
   return (
     <div className="h-screen bg-slate-900">
       <header className="flex h-16 items-center justify-end bg-zinc-200 pr-5 text-slate-600">
@@ -68,7 +79,7 @@ const Home: NextPage = () => {
             <h2 className="pb-3 text-3xl text-slate-500">
               Full Stack Developer
             </h2>
-            <p className="w-1/2 text-slate-600">
+            <p className="w-full text-slate-600 2xl:w-1/2">
               As a Sr. Technology Analyst transitioning into the Full Stack
               Developer realm, I bring a unique set of skills and experience.
               With a degree in statistics, I have a solid foundation in data
@@ -86,39 +97,22 @@ const Home: NextPage = () => {
               innovative applications that bridge the gap between data analytics
               and user experiences.
             </p>
-
-            <div className="flex gap-4">
-              <div className="my-5 h-24 w-24 ">
-                <img src={"../../../images/sql.svg"} alt="Your SVG" />
-              </div>
-              <div className="my-5 h-24 w-24 ">
-                <img src={"../../../images/js.svg"} alt="Your SVG" />
-              </div>
-              <div className="my-5 h-24 w-24 ">
-                <img src={"../../../images/react.svg"} alt="Your SVG" />
-              </div>
-              <div className="my-5 h-24 w-24 ">
-                <img src={"../../../images/html.svg"} alt="Your SVG" />
-              </div>
-              <div className="my-5 h-24 w-24 ">
-                <img src={"../../../images/css.svg"} alt="Your SVG" />
-              </div>
-              <div className="my-5 h-24 w-24 ">
-                <img src={"../../../images/tailwind.svg"} alt="Your SVG" />
-              </div>
-              <div className="my-5 h-24 w-24 ">
-                <img src={"../../../images/typescript.svg"} alt="Your SVG" />
-              </div>
-              <div className="my-5 h-24 w-24 ">
-                <img src={"../../../images/node.svg"} alt="Your SVG" />
-              </div>
+            <h2 className="mt-20 mb-5 text-center text-3xl text-slate-900">
+              Tech
+            </h2>
+            <div className="grid grid-cols-1 justify-items-center items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              {skills.map((skill, index) => (
+                <div
+                  key={index}
+                  className="my-5 flex h-24 w-24 flex-col items-center justify-center"
+                >
+                  <div>
+                    <img src={`../../../images/${skill}.svg`} alt={skill} />
+                  </div>
+                  <div className="text-center">{skill}</div>
+                </div>
+              ))}
             </div>
-            <h1 className="mt-10 pb-2 text-6xl  text-slate-600">Experience</h1>
-            <ul>
-              <li>Sr. Technology Analyst</li>
-              <li>Technology Analyst</li>
-              <li>Product Data Analyst</li>
-            </ul>
           </div>
         </section>
         <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%]">
@@ -261,7 +255,7 @@ const Home: NextPage = () => {
                 className="text-md min-h-1/2 w-1/3 resize-y rounded-sm bg-slate-200 py-2 pl-2"
               ></textarea>
 
-              <button className="mt-5 w-[6%] rounded-md bg-slate-500 py-2 text-slate-100">
+              <button className="mt-5 w-[10%] rounded-md bg-slate-500 px-2 py-2 text-slate-100">
                 Submit
               </button>
             </div>
