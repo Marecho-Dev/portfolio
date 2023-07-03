@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   const skills = [
     "MySQL",
     "Javascript",
-    "React",
+    "react",
     "HTML",
     "CSS",
     "Tailwind",
