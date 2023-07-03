@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   const skills = [
     "MySQL",
     "Javascript",
-    "react",
+    "React",
     "HTML",
     "CSS",
     "Tailwind",
@@ -108,7 +108,7 @@ const Home: NextPage = () => {
                   className="my-5 flex h-24 w-24 flex-col items-center justify-center"
                 >
                   <div>
-                    <img src={`../../../images/${skill}.svg`} alt={skill} />
+                    <img src={`/public/images/${skill}.svg`} alt={skill} />
                   </div>
                   <div className="text-center">{skill}</div>
                 </div>
