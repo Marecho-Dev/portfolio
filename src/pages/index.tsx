@@ -12,6 +12,7 @@ const Home: NextPage = () => {
     "TypeScript",
     "Node",
     "Python",
+    "Flask",
   ];
   return (
     <div className="h-screen bg-slate-900">
