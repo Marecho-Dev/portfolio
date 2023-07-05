@@ -98,10 +98,10 @@ const Home: NextPage = () => {
               innovative applications that bridge the gap between data analytics
               and user experiences.
             </p>
-            <h2 className="mt-20 mb-5 text-center text-3xl text-slate-900">
+            <h2 className="mb-5 mt-20 text-center text-3xl text-slate-900">
               Tech
             </h2>
-            <div className="grid grid-cols-1 justify-items-center items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-1 items-center justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {skills.map((skill, index) => (
                 <div
                   key={index}
@@ -123,8 +123,8 @@ const Home: NextPage = () => {
         </div>
         <section className="min-h-screen w-full bg-slate-300">
           {/* this next part is the project with card on right side */}
-          <div className="w-80% bg-slate-3-- mx-[20%] flex h-[50%] pt-10">
-            <div className="h-full w-1/2 bg-white">
+          <div className="w-80% bg-slate-3-- mx-[20%] flex h-[50vh] pt-10">
+            <div className="h-full w-[50%] bg-black">
               <div className="relative h-full w-full rounded-sm">
                 <img
                   src="/images/MM.jpg"
@@ -139,11 +139,11 @@ const Home: NextPage = () => {
                 />
               </div>
             </div>
-            <div className="h-full w-1/3 flex-col">
+            <div className="h-full w-1/2 flex-col 2xl:w-1/3">
               <div className="flex items-center justify-end pr-5 text-3xl">
                 <h1>Manga Mood</h1>
               </div>
-              <div className="mt-3 w-full bg-zinc-800 p-5 text-slate-200">
+              <div className="mt-3 h-1/2 w-full bg-zinc-800 p-5 text-slate-200">
                 Manga Mood is a full-stack SPA built using the T3 stack. It
                 utilizes Machine Learning via a RESTful API in order to generate
                 manga recommendations by comparing what you've rated on
@@ -165,9 +165,9 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* this is project with card on left side */}
-          <div className="w-80% bg-slate-3-- mx-[20%] flex h-[50%] pt-10">
-            <div className="h-full w-1/3 flex-col">
-              <div className="flex items-center justify-end pr-5 text-3xl">
+          <div className="w-80% bg-slate-3-- mx-[20%] flex h-[50vh] justify-end pt-10">
+            <div className="h-full w-1/2 flex-col  2xl:w-1/3">
+              <div className="flex items-center justify-start pr-5 text-3xl">
                 <h1>Manga Rec Restful API</h1>
               </div>
               <div className="mt-3 h-1/2 w-full bg-zinc-800 p-5 text-slate-200">
@@ -175,7 +175,7 @@ const Home: NextPage = () => {
                 machine learning on an input user to find mangas they should
                 read next
               </div>
-              <div className="flex items-center justify-end gap-2  text-lg">
+              <div className="flex items-center justify-start gap-2  text-lg">
                 <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
                   Pyton
                 </h1>
@@ -198,7 +198,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* this is end of project with card on left side */}
-          <div className="w-80% mx-[20%] flex h-[50%] flex-grow bg-slate-300 pt-10">
+          <div className="w-80% mx-[20%] flex h-[50vh] flex-grow bg-slate-300 pt-10">
             <div className=" h-full w-1/2 bg-white">
               <div className="h-full w-full rounded-sm">
                 <img
@@ -208,7 +208,7 @@ const Home: NextPage = () => {
                 />
               </div>
             </div>
-            <div className="h-full w-1/3 flex-col">
+            <div className="h-full w-1/2 flex-col 2xl:w-1/3">
               <div className="flex items-center justify-end pr-5 text-3xl">
                 <h1>Metal General</h1>
               </div>
