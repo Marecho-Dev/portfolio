@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export const ContentCard = () => {
   return (
     <div className="w-80% bg-slate-3-- mx-[20%] flex h-[50%] pt-10">
