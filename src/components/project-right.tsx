@@ -9,14 +9,14 @@ type contentCard = {
 /* eslint-disable react/no-unescaped-entities */
 export const ContentCardRight = (contentCard: contentCard) => {
   const { ref, inView } = useInView({
-    threshold: 0.2, // Trigger when 20% of the card is visible
+    threshold: 0, // Trigger when 20% of the card is visible
   });
 
   return (
     <div
       ref={ref}
-      className={`w-80% ${
-        inView ? "animate-slide-in-left" : ""
+      className={`w-80% transition-opacity duration-2000 ${
+        inView ? "animate-slide-in-left opacity-100" : "opacity-0"
       } mx-[20%] flex h-[50vh] bg-slate-300 pt-10 font-mono`}
     >
       <div className="h-full w-[50%]">
