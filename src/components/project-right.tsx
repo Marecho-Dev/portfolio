@@ -1,8 +1,25 @@
+import { useInView } from "react-intersection-observer";
+
+type contentCard = {
+  title: string;
+  summary: string;
+  tech: string[];
+};
+
 /* eslint-disable react/no-unescaped-entities */
-export const ContentCard = () => {
+export const ContentCardRight = (contentCard: contentCard) => {
+  const { ref, inView } = useInView({
+    threshold: 0.2, // Trigger when 20% of the card is visible
+  });
+
   return (
-    <div className="w-80% bg-slate-3-- mx-[20%] flex h-[50%] pt-10">
-      <div className="h-full w-1/2 bg-white">
+    <div
+      ref={ref}
+      className={`w-80% ${
+        inView ? "animate-slide-in-left" : ""
+      } mx-[20%] flex h-[50vh] bg-slate-300 pt-10 font-mono`}
+    >
+      <div className="h-full w-[50%]">
         <div className="relative h-full w-full rounded-sm">
           <img
             src="/images/MM.jpg"
@@ -17,32 +34,25 @@ export const ContentCard = () => {
           />
         </div>
       </div>
-      <div className="h-full w-1/3 flex-col">
+      <div className="h-full w-1/2 flex-col 2xl:w-1/3">
         <div className="flex items-center justify-end pr-5 text-3xl">
-          <h1>Manga Mood</h1>
+          <h1>{contentCard.title}</h1>
         </div>
-        <div className="mt-3 w-full bg-zinc-800 p-5 text-slate-200">
-          Manga Mood is a full-stack SPA built using the T3 stack. It utilizes
-          Machine Learning via a RESTful API in order to generate manga
-          recommendations by comparing what you've rated on myanimelist to what
-          other users have rated. If you don't have a myanimelist username,
-          please use 'marecho' to test it out! Still a work in progress, but
-          manga recommendations is functioning!
+        <div className="mt-3 h-1/2 w-full bg-slate-800 p-5 text-slate-100">
+          {contentCard.summary}
         </div>
         <div className="flex items-center justify-end gap-2  text-lg">
-          <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
-            React
-          </h1>
-          <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
-            TypeScript
-          </h1>
-          <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
-            Tailwind
-          </h1>
+          {contentCard.tech.map((technology, index) => {
+            return (
+              <div key={index} className="px-2 py-1 text-slate-900">
+                {technology}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 };
 
-export default ContentCard;
+export default ContentCardRight;

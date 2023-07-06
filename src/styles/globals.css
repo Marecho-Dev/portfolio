@@ -5,3 +5,18 @@
 body {
   @apply bg-zinc-50;
 }
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation-name: slide-in-left;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
