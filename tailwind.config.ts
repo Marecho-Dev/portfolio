@@ -7,6 +7,11 @@ export default {
       transitionDuration: {
         "2000": "2000ms",
       },
+      screens: {
+
+        '3xl': "1600px",
+        // => @media (min-width: 1280px) { ... }
+      },
     },
   },
   plugins: [],
