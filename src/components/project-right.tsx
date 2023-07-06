@@ -38,7 +38,7 @@ export const ContentCardRight = (contentCard: contentCard) => {
         <div className="flex items-center justify-end pr-5 text-3xl">
           <h1>{contentCard.title}</h1>
         </div>
-        <div className="mt-3 h-1/2 w-full bg-slate-800 p-5 text-xs text-slate-100 2xl:text-base">
+        <div className="min-h-1/2 mt-3 w-full bg-slate-800 p-5 text-xs text-slate-100 2xl:text-base">
           {contentCard.summary}
         </div>
         <div className="flex items-center justify-end gap-2  text-lg">
