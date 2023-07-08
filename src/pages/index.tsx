@@ -16,6 +16,8 @@ const Home: NextPage = () => {
     "Python",
     "Flask",
   ];
+
+  //below is a list of objects each representing a different project.
   const mangaMood = {
     title: "Manga Mood",
     summary:
@@ -75,19 +77,23 @@ const Home: NextPage = () => {
               Currently a Sr. Technology Analyst at AutoNation. Passionate about
               react, machine learning, music and manga.
             </p>
-            <div className="flex w-[0%]  gap-2 pt-5">
-              <button className="aspect-square h-10 w-10 text-slate-500">
-                <img src={"../../../images/github3.svg"} alt="Your SVG" />
-              </button>
-              <button className="aspect-square h-10 w-10 text-slate-500">
-                <img src={"../../../images/linkedin.svg"} alt="Your SVG" />
-              </button>
-              <button className="flex aspect-square h-10 w-10 items-end text-slate-500">
-                <img src={"../../../images/mail2.svg"} alt="Your SVG" />
-              </button>
-              <button className="flex aspect-square h-10 w-10 items-end text-slate-500">
-                <img src={"../../../images/resume.svg"} alt="Your SVG" />
-              </button>
+            <div className="w-full flex-col items-center justify-center gap-2 pt-5">
+              <div className="flex w-full justify-center gap-2 pt-5">
+                <button className="aspect-square h-10 w-10 text-slate-500">
+                  <img src={"../../../images/github.svg"} alt="Your SVG" />
+                </button>
+                <button className="aspect-square h-10 w-10 text-slate-500">
+                  <img src={"../../../images/in.svg"} alt="Your SVG" />
+                </button>
+                <button className="flex aspect-square h-10 w-10 items-end text-slate-500">
+                  <img src={"../../../images/mail.svg"} alt="Your SVG" />
+                </button>
+              </div>
+              <div className="flex w-full justify-center gap-2 pt-5">
+                <button className="border border-slate-900 px-2 py-1 text-slate-900">
+                  Resume
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -97,7 +103,7 @@ const Home: NextPage = () => {
         <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%]">
           <div className="mt-5">01</div>
           <div className="text-2xl">About</div>
-          <div className="mt-1 w-[50%] border-t border-gray-900"></div>
+          <div className="mt-1 w-full border-t border-gray-900"></div>
         </div>
         <section className="w-50% flex min-h-screen gap-10 bg-slate-300">
           <div className="ml-[20%] flex pt-10 ">
