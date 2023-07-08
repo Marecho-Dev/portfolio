@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { type NextPage } from "next";
+import ContentCardLeft from "~/components/project-left";
 import { ContentCardRight } from "~/components/project-right";
 
 const Home: NextPage = () => {
@@ -20,9 +21,28 @@ const Home: NextPage = () => {
     summary:
       "Manga Mood is a full-stack SPA built using the T3 stack. It utilizes Machine Learning via a RESTful API in order to generate manga recommendations by comparing what you've rated on myanimelist to what other users have rated. If you don't have a myanimelist username, please use 'marecho' to test it out! Still a work in progress and I have long term plans for this project, but manga reocmmendations if functioning",
     tech: ["React", "TypeScript", "Tailwind"],
+    jpg: "/images/MM.jpg",
+    alternateJPG: "/images/Animation.gif",
+  };
+
+  const metalGeneral = {
+    title: "Metal General",
+    summary:
+      "ERP Built for the company Metal General which is built upon the T3 stack using supabase",
+    tech: ["React", "TypeScript", "Tailwind"],
+    jpg: "/images/metal-general.jpg",
+    alternateJPG: "",
+  };
+  const mangaMoodAPI = {
+    title: "Manga Mood Restful API",
+    summary:
+      "estful API created using flask and python in order to perform machine learning on an input user to find mangas they should read next",
+    tech: ["React", "TypeScript", "Tailwind"],
+    jpg: "/images/MM-API.jpg",
+    alternateJPG: "",
   };
   return (
-    <div className="h-screen bg-slate-900">
+    <div className="h-screen bg-slate-900 font-mono">
       <header className="flex h-16 items-center justify-end bg-zinc-200 pr-5 text-slate-600">
         <nav className="flex w-full">
           <div className="flex w-[30%] items-center gap-1 pl-5">
@@ -37,16 +57,16 @@ const Home: NextPage = () => {
           </div>
         </nav>
       </header>
-      <section className="flex h-full w-full gap-10 bg-slate-300">
-        <div className="ml-[20%] mt-[10%] h-[50%] w-[30%]">
+      <section className="flex h-full w-full items-center justify-center gap-10 bg-slate-300 text-center">
+        {/* <div className="ml-[20%] mt-[10%] h-[50%] w-[30%]">
           <img
             src="/images/Marek.jpg"
             alt="Manga Mood"
             className="h-full w-full object-cover"
           />
-        </div>
-        <div className="mr-[20%] mt-[13%] flex">
-          <div className="w-96 flex-col">
+        </div> */}
+        <div className="flex justify-center">
+          <div className="w-[70%] flex-col items-center justify-center">
             <h1 className="pb-2 text-6xl  text-slate-600">Hi, I'm Marek</h1>
             <h2 className="pb-3 text-3xl text-slate-500">
               Full Stack Developer
@@ -55,7 +75,7 @@ const Home: NextPage = () => {
               Currently a Sr. Technology Analyst at AutoNation. Passionate about
               react, machine learning, music and manga.
             </p>
-            <div className="flex w-[0%] gap-2 pt-5">
+            <div className="flex w-[0%]  gap-2 pt-5">
               <button className="aspect-square h-10 w-10 text-slate-500">
                 <img src={"../../../images/github3.svg"} alt="Your SVG" />
               </button>
@@ -131,72 +151,10 @@ const Home: NextPage = () => {
         <section className="min-h-screen w-full bg-slate-300">
           {/* this next part is the project with card on right side */}
           <ContentCardRight {...mangaMood} />
-
           {/* this is project with card on left side */}
-          <div className="w-80% bg-slate-3-- mx-[20%] flex h-[50vh] justify-end pt-10">
-            <div className="h-full w-1/2 flex-col  2xl:w-1/3">
-              <div className="flex items-center justify-start pr-5 text-3xl">
-                <h1>Manga Rec Restful API</h1>
-              </div>
-              <div className="mt-3 h-1/2 w-full bg-zinc-800 p-5 text-slate-200">
-                Restful API created using flask and python in order to perform
-                machine learning on an input user to find mangas they should
-                read next
-              </div>
-              <div className="flex items-center justify-start gap-2  text-lg">
-                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
-                  Pyton
-                </h1>
-                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
-                  Flask
-                </h1>
-                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
-                  Pandas
-                </h1>
-              </div>
-            </div>
-            <div className="h-full w-1/2 bg-white">
-              <div className="h-full w-full rounded-sm">
-                <img
-                  src="/images/MM-API.jpg"
-                  alt="Manga Mood"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
+          <ContentCardLeft {...mangaMoodAPI} />
           {/* this is end of project with card on left side */}
-          <div className="w-80% mx-[20%] flex h-[50vh] flex-grow bg-slate-300 pt-10">
-            <div className=" h-full w-1/2 bg-white">
-              <div className="h-full w-full rounded-sm">
-                <img
-                  src="/images/metal-general.jpg"
-                  alt="Manga Mood"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
-            <div className="h-full w-1/2 flex-col 2xl:w-1/3">
-              <div className="flex items-center justify-end pr-5 text-3xl">
-                <h1>Metal General</h1>
-              </div>
-              <div className="mt-3 h-1/2 w-full bg-zinc-800 p-5 text-slate-200">
-                ERP Built for the company Metal General which is built upon the
-                T3 stack using supabase
-              </div>
-              <div className="flex items-center justify-end gap-2  text-lg">
-                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
-                  React
-                </h1>
-                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
-                  TypeScript
-                </h1>
-                <h1 className="mt-2 rounded-md bg-slate-600 px-2 py-1 text-slate-300">
-                  Tailwind
-                </h1>
-              </div>
-            </div>
-          </div>
+          <ContentCardRight {...metalGeneral} />
           {/* this is end of project with card on right side */}
         </section>
         <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%] pt-10">

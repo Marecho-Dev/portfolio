@@ -20,3 +20,18 @@ body {
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
 }
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100);
+  }
+}
+
+.animate-slide-in-right {
+  animation-name: slide-in-right;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
