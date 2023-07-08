@@ -68,15 +68,17 @@ const Home: NextPage = () => {
           />
         </div> */}
         <div className="flex justify-center">
-          <div className="w-[70%] flex-col items-center justify-center">
-            <h1 className="pb-2 text-6xl  text-slate-600">Hi, I'm Marek</h1>
-            <h2 className="pb-3 text-3xl text-slate-500">
+          <div className="w-full flex-col items-center justify-center">
+            <h1 className="pb-2 text-9xl  text-slate-600">Hi, I'm Marek</h1>
+            <h2 className="pb-3 text-6xl text-slate-500">
               Full Stack Developer
             </h2>
-            <p className="w-[100%] text-slate-600">
-              Currently a Sr. Technology Analyst at AutoNation. Passionate about
-              react, machine learning, music and manga.
-            </p>
+            <div className="flex w-full items-center justify-center">
+              <p className="text-md text-md w-[60%] text-slate-600">
+                Currently a Sr. Technology Analyst at AutoNation. Passionate
+                about react, machine learning, music and manga.
+              </p>
+            </div>
             <div className="w-full flex-col items-center justify-center gap-2 pt-5">
               <div className="flex w-full justify-center gap-2 pt-5">
                 <button className="aspect-square h-10 w-10 text-slate-500">
