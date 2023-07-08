@@ -45,7 +45,7 @@ const Home: NextPage = () => {
   };
   return (
     <div className="h-screen bg-slate-900 font-mono">
-      <header className="flex h-16 items-center justify-end bg-zinc-200 pr-5 text-slate-600">
+      {/* <header className="flex h-16 items-center justify-end bg-slate-600 pr-5 text-slate-100">
         <nav className="flex w-full">
           <div className="flex w-[30%] items-center gap-1 pl-5">
             <div>Marek Staszkiewicz</div>
@@ -58,8 +58,8 @@ const Home: NextPage = () => {
             </ul>
           </div>
         </nav>
-      </header>
-      <section className="flex h-full w-full items-center justify-center gap-10 bg-slate-300 text-center">
+      </header> */}
+      <section className="flex h-full w-full items-center justify-center gap-10 bg-slate-900 text-center">
         {/* <div className="ml-[20%] mt-[10%] h-[50%] w-[30%]">
           <img
             src="/images/Marek.jpg"
@@ -69,37 +69,40 @@ const Home: NextPage = () => {
         </div> */}
         <div className="flex justify-center">
           <div className="w-full flex-col items-center justify-center">
-            <h1 className="pb-2 text-9xl  text-slate-600">Hi, I'm Marek</h1>
+            <h1 className="pb-2 text-9xl  text-slate-200">Hi, I'm Marek</h1>
             <div className="flex items-center">
-              <h2 className="animate-typewriter m-auto overflow-hidden whitespace-nowrap pb-3 text-6xl tracking-tighter text-slate-500">
+              <h2 className="animate-typewriter m-auto overflow-hidden whitespace-nowrap pb-3 text-6xl tracking-tighter text-slate-100">
                 <p>
                   Full Stack Developer
-                  <span className="animate-blink-caret inline-block h-8 w-1 border-2 border-slate-500 text-4xl">
-                    {" "}
-                  </span>
+                  <span className="animate-blink-caret border-2 border-slate-100 text-4xl"></span>
                 </p>
               </h2>
             </div>
             <div className="flex w-full items-center justify-center">
-              <p className="text-md text-md w-[60%] text-slate-600">
-                Currently a Sr. Technology Analyst at AutoNation. Passionate
+              <p className="text-md text-md w-[60%] text-slate-100">
+                Currently a Sr. Technology Analyst at{" "}
+                <span className="text-pink-200">@AutoNation</span>. Passionate
                 about react, machine learning, music and manga.
               </p>
             </div>
             <div className="w-full flex-col items-center justify-center gap-2 pt-5">
               <div className="flex w-full justify-center gap-2 pt-5">
-                <button className="aspect-square h-10 w-10 text-slate-500">
-                  <img src={"../../../images/github.svg"} alt="Your SVG" />
+                <button className="aspect-square h-10 w-10">
+                  <img
+                    src={"../../../images/github.svg"}
+                    className="text-slate-100"
+                    alt="Your SVG"
+                  />
                 </button>
-                <button className="aspect-square h-10 w-10 text-slate-500">
+                <button className="aspect-square h-10 w-10 text-slate-100">
                   <img src={"../../../images/in.svg"} alt="Your SVG" />
                 </button>
-                <button className="flex aspect-square h-10 w-10 items-end text-slate-500">
+                <button className="flex aspect-square h-10 w-10 items-end text-slate-100">
                   <img src={"../../../images/mail.svg"} alt="Your SVG" />
                 </button>
               </div>
               <div className="flex w-full justify-center gap-2 pt-5">
-                <button className="border border-slate-900 px-2 py-1 text-slate-900">
+                <button className="border border-slate-100 px-2 py-1 text-slate-100">
                   Resume
                 </button>
               </div>
