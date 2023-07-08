@@ -37,7 +37,7 @@ const Home: NextPage = () => {
     title: "Manga Mood Restful API",
     summary:
       "estful API created using flask and python in order to perform machine learning on an input user to find mangas they should read next",
-    tech: ["React", "TypeScript", "Tailwind"],
+    tech: ["Python", "Flask", "Pandas"],
     jpg: "/images/MM-API.jpg",
     alternateJPG: "",
   };
@@ -97,49 +97,50 @@ const Home: NextPage = () => {
         <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%]">
           <div className="mt-5">01</div>
           <div className="text-2xl">About</div>
-          <div className="mt-1 w-full border-t border-gray-900"></div>
+          <div className="mt-1 w-[50%] border-t border-gray-900"></div>
         </div>
-        <section className="flex min-h-screen w-full gap-10 bg-slate-300">
-          <div className="mx-[20%] pt-10 ">
-            <h1 className="pb-2 text-6xl  text-slate-600">
-              Marek Staszkiewicz
-            </h1>
-            <h2 className="pb-3 text-3xl text-slate-500">
-              Full Stack Developer
-            </h2>
-            <p className="w-full text-slate-600 2xl:w-1/2">
-              As a Sr. Technology Analyst transitioning into the Full Stack
-              Developer realm, I bring a unique set of skills and experience.
-              With a degree in statistics, I have a solid foundation in data
-              analytics and programming. I became passionate about coding, and
-              have since created and delivered innovative solutions by merging
-              data analysis with technology. Throughout my career, I have
-              embraced self-learning, and constantly expanded my knowledge in
-              various technologies. I enjoy programming in React, TypeScript,
-              and Python, and have found myself capable of building scalable
-              applications with those languages. I love creating apps that
-              curate content in meaningful ways, and am always looking forward
-              to learning new methods and skills to do it. With my background in
-              statistics and passion for coding, I am excited to pursue my goal
-              of becoming a full stack engineer and continue to create
-              innovative applications that bridge the gap between data analytics
-              and user experiences.
-            </p>
-            <h2 className="mb-5 mt-20 text-center text-3xl text-slate-900">
-              Tech
-            </h2>
-            <div className="grid grid-cols-1 items-center justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {skills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="my-5 flex h-24 w-24 flex-col items-center justify-center"
-                >
-                  <div>
-                    <img src={`../../../images/${skill}.svg`} alt={skill} />
+        <section className="w-50% flex min-h-screen gap-10 bg-slate-300">
+          <div className="ml-[20%] flex pt-10 ">
+            <div className="w-1/2 pr-[20%]">
+              <h1 className="pb-2 text-6xl  text-slate-600">
+                Marek Staszkiewicz
+              </h1>
+              <h2 className="pb-3 text-3xl text-slate-500">
+                Full Stack Developer
+              </h2>
+              <p className=" text-slate-600 ">
+                As a Sr. Technology Analyst transitioning into the Full Stack
+                Developer realm, I bring a unique set of skills and experience.
+                With a degree in statistics, I have a solid foundation in data
+                analytics and programming. I became passionate about coding, and
+                have since created and delivered innovative solutions by merging
+                data analysis with technology. Throughout my career, I have
+                embraced self-learning, and constantly expanded my knowledge in
+                various technologies. I enjoy programming in React, TypeScript,
+                and Python, and have found myself capable of building scalable
+                applications with those languages. I love creating apps that
+                curate content in meaningful ways, and am always looking forward
+                to learning new methods and skills to do it. With my background
+                in statistics and passion for coding, I am excited to pursue my
+                goal of becoming a full stack engineer and continue to create
+                innovative applications that bridge the gap between data
+                analytics and user experiences.
+              </p>
+            </div>
+            <div>
+              <div className=" grid grid-cols-1 items-center justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                {skills.map((skill, index) => (
+                  <div
+                    key={index}
+                    className="my-5 flex h-24 w-24 flex-col items-center justify-center"
+                  >
+                    <div>
+                      <img src={`../../../images/${skill}.svg`} alt={skill} />
+                    </div>
+                    <div className="text-center">{skill}</div>
                   </div>
-                  <div className="text-center">{skill}</div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>

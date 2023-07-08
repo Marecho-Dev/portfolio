@@ -17,15 +17,15 @@ export const ContentCardLeft = (contentCard: contentCard) => {
   return (
     <div
       ref={ref}
-      className={`w-80% transition-opacity duration-2000 ${
+      className={`w-80% relative transition-opacity duration-2000 ${
         inView ? "animate-slide-in-right opacity-100" : "opacity-0"
       } mx-[20%] flex h-[50vh] justify-end bg-slate-300 pt-10 font-mono`}
     >
-      <div className="h-full w-1/2 flex-col 2xl:w-1/3">
+      <div className="absolute left-[20%] z-10 h-full w-full flex-col 2xl:w-1/3">
         <div className="flex items-center justify-start pr-5 text-3xl">
           <h1>{contentCard.title}</h1>
         </div>
-        <div className="mt-3 min-h-[30%] w-full bg-slate-800 p-5 text-xs text-slate-100 2xl:text-base">
+        <div className="mt-3 min-h-[30%] w-full bg-slate-200 p-5 text-xs text-slate-900 2xl:text-base">
           {contentCard.summary}
         </div>
         <div className="flex items-center justify-start gap-2  text-lg">

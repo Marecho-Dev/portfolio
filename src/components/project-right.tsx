@@ -17,7 +17,7 @@ export const ContentCardRight = (contentCard: contentCard) => {
   return (
     <div
       ref={ref}
-      className={`w-80% transition-opacity duration-2000 ${
+      className={`w-80% relative transition-opacity duration-2000 ${
         inView ? "animate-slide-in-left opacity-100" : "opacity-0"
       } mx-[20%] flex h-[50vh] bg-slate-300 pt-10 font-mono`}
     >
@@ -26,23 +26,23 @@ export const ContentCardRight = (contentCard: contentCard) => {
           <img
             src={`${contentCard.jpg}`}
             alt={`${contentCard.title}`}
-            className="h-full w-full object-cover"
+            className="h-full w-full rounded-md object-cover"
           />
           {contentCard.alternateJPG != "" && (
             <img
               src={`${contentCard.alternateJPG}`}
               alt={`${contentCard.title + " alt"}`}
-              className="absolute left-0 top-0 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
+              className="absolute left-0 top-0 rounded-md opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100"
               style={{ width: "100%", height: "100%" }}
             />
           )}
         </div>
       </div>
-      <div className="h-full w-1/2 flex-col 2xl:w-1/3">
+      <div className="absolute right-[20%] h-[full] w-full flex-col 2xl:w-1/3">
         <div className="flex items-center justify-end pr-5 text-3xl">
           <h1>{contentCard.title}</h1>
         </div>
-        <div className="mt-3 min-h-[30%] w-full bg-slate-800 p-5 text-xs text-slate-100 2xl:text-base">
+        <div className="mt-3 min-h-[30%] w-full rounded-md bg-slate-200 p-5 text-xs text-slate-900 2xl:text-base">
           {contentCard.summary}
         </div>
         <div className="flex items-center justify-end gap-2  text-lg">
