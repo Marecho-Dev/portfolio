@@ -113,7 +113,10 @@ const Home: NextPage = () => {
               <h2 className="animate-typewriter m-auto overflow-hidden whitespace-nowrap pb-3 text-6xl tracking-tighter text-slate-100">
                 <p>
                   Full Stack Developer
-                  <span className="animate-blink-caret border-2 border-slate-100 text-4xl"></span>
+                  <span
+                    className="animate-blink-caret h-full border-2 border-slate-100 text-4xl"
+                    style={{ height: "80%", marginTop: 0 }}
+                  ></span>
                 </p>
               </h2>
             </div>
@@ -127,23 +130,42 @@ const Home: NextPage = () => {
             <div className="w-full flex-col items-center justify-center gap-2 pt-5">
               <div className="flex w-full justify-center gap-2 pt-5">
                 <button className="aspect-square h-10 w-10">
-                  <img
-                    src={"../../../images/github.svg"}
-                    className="text-slate-100"
-                    alt="Your SVG"
-                  />
+                  <a
+                    href="https://github.com/mareks1993"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={"../../../images/github.svg"}
+                      className="text-slate-100"
+                      alt="Your SVG"
+                    />
+                  </a>
                 </button>
                 <button className="aspect-square h-10 w-10 text-slate-100">
-                  <img src={"../../../images/in.svg"} alt="Your SVG" />
+                  <a
+                    href="https://www.linkedin.com/in/marek-staszkiewicz-022358123/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={"../../../images/in.svg"} alt="Your SVG" />
+                  </a>
                 </button>
                 <button className="flex aspect-square h-10 w-10 items-end text-slate-100">
-                  <img src={"../../../images/mail.svg"} alt="Your SVG" />
+                  <a href="mailto:marekstaszkiewicz@live.com">
+                    <img src={"../../../images/mail.svg"} alt="Your SVG" />
+                  </a>
                 </button>
               </div>
               <div className="flex w-full justify-center gap-2 pt-5">
-                <button className="border border-slate-100 px-2 py-1 text-slate-100">
-                  Resume
-                </button>
+                <a
+                  href="../../../images/Marek Staszkiewicz Resume.pdf"
+                  download
+                >
+                  <button className="border border-slate-100 px-2 py-1 text-slate-100">
+                    Resume
+                  </button>
+                </a>
               </div>
             </div>
           </div>
