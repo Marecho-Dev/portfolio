@@ -282,11 +282,11 @@ const Home: NextPage = () => {
       <div className="flex h-[6%] w-full flex-col items-center justify-center gap-2 bg-slate-900">
         <div className="flex w-full items-center justify-center gap-3">
           {/* <div className="w-[30%] border-t"></div> */}
-          <button className="aspect-square h-8 w-8 rounded-full border border-slate-100 px-2">
-            <a href="#home">
+          <a href="#home">
+            <button className="aspect-square h-8 w-8 rounded-full border border-slate-100 px-2">
               <img src={"../../../images/up-arrow.svg"} alt="Your SVG" />
-            </a>
-          </button>
+            </button>
+          </a>
           {/* <div className="w-[30%] border-t "></div> */}
         </div>
         <div className="flex items-center justify-center gap-2 text-center text-slate-100">
