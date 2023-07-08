@@ -19,7 +19,7 @@ export const ContentCardRight = (contentCard: contentCard) => {
       ref={ref}
       className={`w-80% relative transition-opacity duration-2000 ${
         inView ? "animate-slide-in-left opacity-100" : "opacity-0"
-      } mx-[20%] flex h-[50vh] bg-slate-300 pt-10 font-mono`}
+      } mx-[20%] flex h-[50vh]  pt-10 font-mono`}
     >
       <div className="h-full w-[50%]">
         <div className="relative h-full w-full rounded-sm">
@@ -39,7 +39,7 @@ export const ContentCardRight = (contentCard: contentCard) => {
         </div>
       </div>
       <div className="absolute right-[20%] h-[full] w-full flex-col 2xl:w-1/3">
-        <div className="flex items-center justify-end pr-5 text-3xl">
+        <div className="flex items-center justify-end pr-5 text-3xl text-slate-200">
           <h1>{contentCard.title}</h1>
         </div>
         <div className="mt-3 min-h-[30%] w-full rounded-md bg-slate-200 p-5 text-xs text-slate-900 2xl:text-base">
@@ -48,7 +48,7 @@ export const ContentCardRight = (contentCard: contentCard) => {
         <div className="flex items-center justify-end gap-2  text-lg">
           {contentCard.tech.map((technology, index) => {
             return (
-              <div key={index} className="px-2 py-1 text-slate-900">
+              <div key={index} className="px-2 py-1 text-slate-200">
                 {technology}
               </div>
             );

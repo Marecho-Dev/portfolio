@@ -145,21 +145,21 @@ const Home: NextPage = () => {
       </section>
 
       <main>
-        <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%]">
+        <div className="flex w-full items-center gap-2 bg-slate-900 px-[18%] text-slate-100">
           <div className="mt-5">01</div>
           <div className="text-2xl">About</div>
-          <div className="mt-1 w-full border-t border-gray-900"></div>
+          <div className="mt-1 w-full border-t border-slate-100"></div>
         </div>
-        <section className="w-50% flex min-h-screen gap-10 bg-slate-300">
+        <section className="w-50% flex min-h-screen gap-10 bg-slate-900">
           <div className="ml-[20%] flex pt-10 ">
             <div className="w-1/2 pr-[20%]">
-              <h1 className="pb-2 text-6xl  text-slate-600">
+              <h1 className="pb-2 text-6xl  text-rose-300">
                 Marek Staszkiewicz
               </h1>
-              <h2 className="pb-3 text-3xl text-slate-500">
+              <h2 className="pb-3 text-3xl text-slate-300">
                 Full Stack Developer
               </h2>
-              <p className=" text-slate-600 ">
+              <p className=" text-slate-100">
                 As a Sr. Technology Analyst transitioning into the Full Stack
                 Developer realm, I bring a unique set of skills and experience.
                 With a degree in statistics, I have a solid foundation in data
@@ -188,19 +188,19 @@ const Home: NextPage = () => {
                     <div>
                       <img src={`../../../images/${skill}.svg`} alt={skill} />
                     </div>
-                    <div className="text-center">{skill}</div>
+                    <div className="text-center text-slate-100">{skill}</div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </section>
-        <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%]">
-          <div className="mt-5 text-slate-600">02</div>
-          <div className="text-2xl">Projects</div>
-          <div className="mt-1 w-full border-t border-gray-900"></div>
+        <div className="flex w-full items-center gap-2 bg-slate-900 px-[18%]">
+          <div className="mt-5 text-slate-100">02</div>
+          <div className="text-2xl text-slate-100">Projects</div>
+          <div className="mt-1 w-full border-t border-slate-100"></div>
         </div>
-        <section className="min-h-screen w-full bg-slate-300">
+        <section className="min-h-screen w-full bg-slate-900">
           {/* this next part is the project with card on right side */}
           <ContentCardRight {...mangaMood} />
           {/* this is project with card on left side */}
@@ -209,15 +209,15 @@ const Home: NextPage = () => {
           <ContentCardRight {...metalGeneral} />
           {/* this is end of project with card on right side */}
         </section>
-        <div className="flex w-full items-center gap-2 bg-slate-300 px-[18%] pt-10">
+        <div className="flex w-full items-center gap-2 bg-slate-900 px-[18%] pt-10 text-slate-100">
           <div className="mt-5">03</div>
           <div className="text-2xl">Contact</div>
-          <div className="mt-1 w-full border-t border-gray-900"></div>
+          <div className="mt-1 w-full border-t border-slate-100"></div>
         </div>
-        <section className="w-full bg-slate-300 ">
+        <section className="w-full bg-slate-900 ">
           {" "}
           <div className="mx-[20%] pt-10 ">
-            <h1 className="pb-10 text-6xl  text-slate-600">Get in touch.</h1>
+            <h1 className="pb-10 text-6xl  text-rose-300">Get in touch.</h1>
             <div className="flex h-96 w-full flex-col">
               <input
                 placeholder="Name"
@@ -234,7 +234,7 @@ const Home: NextPage = () => {
                 className="text-md min-h-1/2 w-1/3 resize-y rounded-sm bg-slate-200 py-2 pl-2"
               ></textarea>
 
-              <button className="mt-5 w-[10%] rounded-md bg-slate-500 px-2 py-2 text-slate-100">
+              <button className="mt-5 w-[10%] rounded-md bg-rose-200 px-2 py-2 text-slate-700">
                 Submit
               </button>
             </div>
