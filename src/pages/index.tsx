@@ -59,6 +59,39 @@ const Home: NextPage = () => {
           </div>
         </nav>
       </header> */}
+      <div className="fixed left-0 h-full ">
+        <div className="ml-5 flex h-full w-full items-center justify-center">
+          <ul className="flex flex-col text-2xl text-slate-100">
+            <li className="flex items-center">
+              <div className="flex flex-col items-center justify-center">
+                <div className="h-5"></div>
+                <div className="h-3 w-3 rounded-full border border-gray-100"></div>
+                <div className="h-5 border-l"></div>
+              </div>
+              <div className="mt-1 w-5 border-t border-gray-100"></div>
+              <span className="pl-1">About</span>
+            </li>
+            <li className="flex items-center">
+              <div className="flex flex-col items-center justify-center">
+                <div className="h-5 border-l"></div>
+                <div className="h-3 w-3 rounded-full border border-gray-100"></div>
+                <div className="h-5 border-l"></div>
+              </div>
+              <div className="mt-1 w-5 border-t border-gray-100"></div>
+              <span className="pl-1">Projects</span>
+            </li>
+            <li className="flex items-center">
+              <div className="flex flex-col items-center justify-center">
+                <div className="h-5 border-l"></div>
+                <div className="h-3 w-3 rounded-full border border-gray-100"></div>
+                <div className="h-5"></div>
+              </div>
+              <div className="mt-1 w-5 border-t border-gray-100"></div>
+              <span className="pl-1">Contact</span>
+            </li>
+          </ul>
+        </div>
+      </div>
       <section className="flex h-full w-full items-center justify-center gap-10 bg-slate-900 text-center">
         {/* <div className="ml-[20%] mt-[10%] h-[50%] w-[30%]">
           <img
