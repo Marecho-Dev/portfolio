@@ -59,7 +59,7 @@ const Home: NextPage = () => {
           </div>
         </nav>
       </header> */}
-      <div className="fixed left-0 h-full ">
+      <div className="fixed left-0 h-full  ">
         <div className="ml-5 flex h-full w-full items-center justify-center">
           <ul className="flex flex-col text-2xl text-slate-100">
             <li>
@@ -279,6 +279,35 @@ const Home: NextPage = () => {
           </div>
         </section>
       </main>
+      <div className="flex h-[6%] w-full flex-col items-center justify-center gap-2 bg-slate-900">
+        <div className="flex w-full items-center justify-center gap-3">
+          {/* <div className="w-[30%] border-t"></div> */}
+          <button className="aspect-square h-8 w-8 rounded-full border border-slate-100 px-2">
+            <a href="#home">
+              <img src={"../../../images/up-arrow.svg"} alt="Your SVG" />
+            </a>
+          </button>
+          {/* <div className="w-[30%] border-t "></div> */}
+        </div>
+        <div className="flex items-center justify-center gap-2 text-center text-slate-100">
+          Made by Marek Staszkiewicz{" "}
+          <span>
+            <button className="flex aspect-square h-5 w-5 items-center">
+              <a
+                href="https://github.com/Mareks1993/portfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={"../../../images/github.svg"}
+                  className="text-slate-100"
+                  alt="Your SVG"
+                />
+              </a>
+            </button>
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
