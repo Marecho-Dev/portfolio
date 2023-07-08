@@ -2,6 +2,7 @@
 import { type NextPage } from "next";
 import ContentCardLeft from "~/components/project-left";
 import { ContentCardRight } from "~/components/project-right";
+import { useInView } from "react-intersection-observer";
 
 const Home: NextPage = () => {
   const skills = [
@@ -43,6 +44,21 @@ const Home: NextPage = () => {
     jpg: "/images/MM-API.jpg",
     alternateJPG: "",
   };
+
+  const { ref: aboutSectionRef, inView: aboutInView } = useInView({
+    threshold: 0.2,
+    rootMargin: "-100px 0px -300px 0px", // Adjust root margin as needed
+  });
+
+  const { ref: projectsSectionRef, inView: projectsInView } = useInView({
+    threshold: 0.2,
+    rootMargin: "-100px 0px -300px 0px", // Adjust root margin as needed
+  });
+
+  const { ref: contactSectionRef, inView: contactInView } = useInView({
+    threshold: 0.2,
+    rootMargin: "-100px 0px -300px 0px", // Adjust root margin as needed
+  });
   return (
     <div id="home" className="h-screen bg-slate-900 font-mono">
       {/* <header className="flex h-16 items-center justify-end bg-slate-600 pr-5 text-slate-100">
@@ -63,7 +79,12 @@ const Home: NextPage = () => {
         <div className="ml-5 flex h-full w-full items-center justify-center">
           <ul className="flex flex-col text-2xl text-slate-100">
             <li>
-              <a href="#about" className="flex items-center">
+              <a
+                href="#about"
+                className={`flex ${
+                  aboutInView ? "text-3xl text-yellow-300" : "text-slate-100"
+                } items-center`}
+              >
                 <div className="flex flex-col items-center justify-center">
                   <div className="h-5"></div>
                   <div className="h-3 w-3 rounded-full border border-gray-100"></div>
@@ -74,8 +95,13 @@ const Home: NextPage = () => {
               </a>
             </li>
             <li>
-              <a href="#projects" className="flex items-center">
-                <div className="flex flex-col items-center justify-center">
+              <a
+                href="#projects"
+                className={`flex items-center ${
+                  projectsInView ? "text-3xl text-yellow-300" : "text-slate-100"
+                }`}
+              >
+                <div className="flex flex-col items-center justify-center ">
                   <div className="h-5 border-l"></div>
                   <div className="h-3 w-3 rounded-full border border-gray-100"></div>
                   <div className="h-5 border-l"></div>
@@ -85,7 +111,12 @@ const Home: NextPage = () => {
               </a>
             </li>
             <li>
-              <a href="#contact" className="flex items-center">
+              <a
+                href="#contact"
+                className={`flex items-center ${
+                  contactInView ? "text-3xl text-yellow-300" : "text-slate-100"
+                }`}
+              >
                 <div className="flex flex-col items-center justify-center">
                   <div className="h-5 border-l"></div>
                   <div className="h-3 w-3 rounded-full border border-gray-100"></div>
@@ -175,6 +206,7 @@ const Home: NextPage = () => {
       <main>
         <div
           id="about"
+          ref={aboutSectionRef}
           className="flex w-full items-center gap-2 bg-slate-900 px-[18%] text-slate-100"
         >
           <div className="mt-5">01</div>
@@ -228,6 +260,7 @@ const Home: NextPage = () => {
         </section>
         <div
           id="projects"
+          ref={projectsSectionRef}
           className="flex w-full items-center gap-2 bg-slate-900 px-[18%]"
         >
           <div className="mt-5 text-slate-100">02</div>
@@ -245,6 +278,7 @@ const Home: NextPage = () => {
         </section>
         <div
           id="contact"
+          ref={contactSectionRef}
           className="flex w-full items-center gap-2 bg-slate-900 px-[18%] pt-10 text-slate-100"
         >
           <div className="mt-5">03</div>
