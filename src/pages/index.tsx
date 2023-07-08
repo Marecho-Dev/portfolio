@@ -44,7 +44,7 @@ const Home: NextPage = () => {
     alternateJPG: "",
   };
   return (
-    <div className="h-screen bg-slate-900 font-mono">
+    <div id="home" className="h-screen bg-slate-900 font-mono">
       {/* <header className="flex h-16 items-center justify-end bg-slate-600 pr-5 text-slate-100">
         <nav className="flex w-full">
           <div className="flex w-[30%] items-center gap-1 pl-5">
@@ -62,32 +62,38 @@ const Home: NextPage = () => {
       <div className="fixed left-0 h-full ">
         <div className="ml-5 flex h-full w-full items-center justify-center">
           <ul className="flex flex-col text-2xl text-slate-100">
-            <li className="flex items-center">
-              <div className="flex flex-col items-center justify-center">
-                <div className="h-5"></div>
-                <div className="h-3 w-3 rounded-full border border-gray-100"></div>
-                <div className="h-5 border-l"></div>
-              </div>
-              <div className="mt-1 w-5 border-t border-gray-100"></div>
-              <span className="pl-1">About</span>
+            <li>
+              <a href="#about" className="flex items-center">
+                <div className="flex flex-col items-center justify-center">
+                  <div className="h-5"></div>
+                  <div className="h-3 w-3 rounded-full border border-gray-100"></div>
+                  <div className="h-5 border-l"></div>
+                </div>
+                <div className="mt-1 w-5 border-t border-gray-100"></div>
+                <span className="pl-1">About</span>
+              </a>
             </li>
-            <li className="flex items-center">
-              <div className="flex flex-col items-center justify-center">
-                <div className="h-5 border-l"></div>
-                <div className="h-3 w-3 rounded-full border border-gray-100"></div>
-                <div className="h-5 border-l"></div>
-              </div>
-              <div className="mt-1 w-5 border-t border-gray-100"></div>
-              <span className="pl-1">Projects</span>
+            <li>
+              <a href="#projects" className="flex items-center">
+                <div className="flex flex-col items-center justify-center">
+                  <div className="h-5 border-l"></div>
+                  <div className="h-3 w-3 rounded-full border border-gray-100"></div>
+                  <div className="h-5 border-l"></div>
+                </div>
+                <div className="mt-1 w-5 border-t border-gray-100"></div>
+                <span className="pl-1">Projects</span>
+              </a>
             </li>
-            <li className="flex items-center">
-              <div className="flex flex-col items-center justify-center">
-                <div className="h-5 border-l"></div>
-                <div className="h-3 w-3 rounded-full border border-gray-100"></div>
-                <div className="h-5"></div>
-              </div>
-              <div className="mt-1 w-5 border-t border-gray-100"></div>
-              <span className="pl-1">Contact</span>
+            <li>
+              <a href="#contact" className="flex items-center">
+                <div className="flex flex-col items-center justify-center">
+                  <div className="h-5 border-l"></div>
+                  <div className="h-3 w-3 rounded-full border border-gray-100"></div>
+                  <div className="h-5"></div>
+                </div>
+                <div className="mt-1 w-5 border-t border-gray-100"></div>
+                <span className="pl-1">Contact</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -145,7 +151,10 @@ const Home: NextPage = () => {
       </section>
 
       <main>
-        <div className="flex w-full items-center gap-2 bg-slate-900 px-[18%] text-slate-100">
+        <div
+          id="about"
+          className="flex w-full items-center gap-2 bg-slate-900 px-[18%] text-slate-100"
+        >
           <div className="mt-5">01</div>
           <div className="text-2xl">About</div>
           <div className="mt-1 w-full border-t border-slate-100"></div>
@@ -195,7 +204,10 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <div className="flex w-full items-center gap-2 bg-slate-900 px-[18%]">
+        <div
+          id="projects"
+          className="flex w-full items-center gap-2 bg-slate-900 px-[18%]"
+        >
           <div className="mt-5 text-slate-100">02</div>
           <div className="text-2xl text-slate-100">Projects</div>
           <div className="mt-1 w-full border-t border-slate-100"></div>
@@ -209,7 +221,10 @@ const Home: NextPage = () => {
           <ContentCardRight {...metalGeneral} />
           {/* this is end of project with card on right side */}
         </section>
-        <div className="flex w-full items-center gap-2 bg-slate-900 px-[18%] pt-10 text-slate-100">
+        <div
+          id="contact"
+          className="flex w-full items-center gap-2 bg-slate-900 px-[18%] pt-10 text-slate-100"
+        >
           <div className="mt-5">03</div>
           <div className="text-2xl">Contact</div>
           <div className="mt-1 w-full border-t border-slate-100"></div>
