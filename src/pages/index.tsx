@@ -161,11 +161,11 @@ const Home: NextPage = () => {
               Hi, I'm Marek
             </h1>
             <div className="flex items-center">
-              <h2 className="animate-typewriter m-auto overflow-hidden whitespace-nowrap pb-3 text-6xl tracking-tighter text-slate-100">
+              <h2 className="animate-typewriter m-auto overflow-hidden whitespace-nowrap pb-3 text-2xl tracking-tighter text-slate-100 lg:text-6xl">
                 <p>
                   Full Stack Developer
                   <span
-                    className="animate-blink-caret h-full border-2 border-slate-100 text-4xl"
+                    className="animate-blink-caret h-2/3 border border-slate-100 text-4xl lg:h-full lg:border-2"
                     style={{ height: "80%", marginTop: 0 }}
                   ></span>
                 </p>
@@ -233,13 +233,13 @@ const Home: NextPage = () => {
           <div className="text-2xl">About</div>
           <div className="mt-1 w-full border-t border-slate-100"></div>
         </div>
-        <section className="w-50% flex min-h-[80vh] gap-10 bg-slate-900 3xl:ml-[20%] ">
+        <section className="lg:w-50% flex w-[100%] gap-10 bg-slate-900 lg:min-h-[80vh] 3xl:ml-[20%] ">
           <div className="flex flex-col items-center 3xl:flex-row  ">
-            <div className="w-1/2">
-              <h1 className="pb-2 text-center text-6xl text-rose-300 3xl:text-left">
+            <div className=" w-2/3 lg:w-1/2">
+              <h1 className="pb-2 text-center text-3xl text-rose-300 lg:text-6xl 3xl:text-left">
                 Marek Staszkiewicz
               </h1>
-              <h2 className="pb-3 text-center text-3xl text-slate-300 3xl:text-left">
+              <h2 className="pb-3 text-center text-lg text-slate-300 lg:text-3xl 3xl:text-left">
                 Full Stack Developer
               </h2>
               <p className=" text-slate-100 3xl:pr-24 3xl:text-left">
@@ -262,7 +262,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div>
-              <div className="grid-col-1 sm:gird-cols-3 mt-[5%] grid grid-cols-10 items-center justify-items-center gap-4 md:grid-cols-4 3xl:grid-cols-4 3xl:gap-5">
+              <div className="grid-col-1 sm:gird-cols-3 mt-[5%] grid grid-cols-4 items-center justify-items-center gap-4 md:grid-cols-4 lg:grid-cols-10 3xl:grid-cols-4 3xl:gap-5">
                 {skills.map((skill, index) => (
                   <div
                     key={index}
