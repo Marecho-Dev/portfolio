@@ -157,7 +157,9 @@ const Home: NextPage = () => {
         </div> */}
         <div className="flex justify-center">
           <div className="w-full flex-col items-center justify-center">
-            <h1 className="pb-2 text-9xl  text-slate-200">Hi, I'm Marek</h1>
+            <h1 className="pb-2 text-5xl text-slate-200  lg:text-9xl">
+              Hi, I'm Marek
+            </h1>
             <div className="flex items-center">
               <h2 className="animate-typewriter m-auto overflow-hidden whitespace-nowrap pb-3 text-6xl tracking-tighter text-slate-100">
                 <p>
