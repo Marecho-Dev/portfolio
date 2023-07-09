@@ -231,13 +231,13 @@ const Home: NextPage = () => {
           <div className="text-2xl">About</div>
           <div className="mt-1 w-full border-t border-slate-100"></div>
         </div>
-        <section className="w-50% flex min-h-screen gap-10 bg-slate-900">
-          <div className="ml-[20%] flex pt-10 ">
-            <div className="w-1/2 pr-[20%]">
-              <h1 className="pb-2 text-6xl  text-rose-300">
+        <section className="w-50% flex min-h-[80vh] gap-10 bg-slate-900 ">
+          <div className="flex flex-col items-center  ">
+            <div className="w-1/2">
+              <h1 className="pb-2 text-center text-6xl text-rose-300">
                 Marek Staszkiewicz
               </h1>
-              <h2 className="pb-3 text-3xl text-slate-300">
+              <h2 className="pb-3 text-center text-3xl text-slate-300">
                 Full Stack Developer
               </h2>
               <p className=" text-slate-100">
@@ -260,40 +260,40 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div>
-              <div className=" grid grid-cols-1 items-center justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+              <div className="grid-col-1 mt-[5%] grid grid-cols-10 items-center justify-items-center gap-4">
                 {skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="my-5 flex h-24 w-24 flex-col items-center justify-center"
+                    className="my-5 flex h-14 w-14 flex-col items-center justify-center"
                   >
                     <div>
                       <img src={`../../../images/${skill}.svg`} alt={skill} />
                     </div>
-                    <div className="text-center text-slate-100">{skill}</div>
+                    <div className="text-center text-xs text-slate-100">
+                      {skill}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </section>
-        <div
-          id="projects"
-          ref={projectsSectionRef}
-          className="flex w-full items-center gap-2 bg-slate-900 px-[18%]"
-        >
-          <div className="mt-5 text-slate-100">02</div>
-          <div className="text-2xl text-slate-100">Projects</div>
-          <div className="mt-1 w-full border-t border-slate-100"></div>
+        <div id="projects" ref={projectsSectionRef}>
+          <div className="flex w-full items-center gap-2 bg-slate-900 px-[18%]">
+            <div className="mt-5 text-slate-100">02</div>
+            <div className="text-2xl text-slate-100">Projects</div>
+            <div className="mt-1 w-full border-t border-slate-100"></div>
+          </div>
+          <section className="min-h-screen w-full bg-slate-900">
+            {/* this next part is the project with card on right side */}
+            <ContentCardRight {...mangaMood} />
+            {/* this is project with card on left side */}
+            <ContentCardLeft {...mangaMoodAPI} />
+            {/* this is end of project with card on left side */}
+            <ContentCardRight {...metalGeneral} />
+            {/* this is end of project with card on right side */}
+          </section>
         </div>
-        <section className="min-h-screen w-full bg-slate-900">
-          {/* this next part is the project with card on right side */}
-          <ContentCardRight {...mangaMood} />
-          {/* this is project with card on left side */}
-          <ContentCardLeft {...mangaMoodAPI} />
-          {/* this is end of project with card on left side */}
-          <ContentCardRight {...metalGeneral} />
-          {/* this is end of project with card on right side */}
-        </section>
         <div
           id="contact"
           ref={contactSectionRef}
@@ -306,8 +306,10 @@ const Home: NextPage = () => {
         <section className="w-full bg-slate-900 ">
           {" "}
           <div className="mx-[20%] pt-10 ">
-            <h1 className="pb-10 text-6xl  text-rose-300">Get in touch.</h1>
-            <div className="flex h-96 w-full flex-col">
+            <h1 className="pb-10 text-center text-6xl text-rose-300">
+              Get in touch.
+            </h1>
+            <div className="flex h-96 w-full flex-col items-center">
               <input
                 placeholder="Name"
                 className=" rounder-sm mb-10 w-1/3 bg-slate-200 py-2 pl-2 text-lg "

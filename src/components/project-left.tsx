@@ -21,7 +21,7 @@ export const ContentCardLeft = (contentCard: contentCard) => {
         inView ? "animate-slide-in-right opacity-100" : "opacity-0"
       } mx-[20%] flex h-[50vh] justify-end  pt-10 font-mono`}
     >
-      <div className="absolute left-[20%] z-10 h-full w-full flex-col 2xl:w-1/3">
+      <div className="absolute left-[5%] z-10 h-full w-[60vh] flex-col 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh]">
         <div className="flex items-center justify-start pr-5 text-3xl text-slate-200">
           <h1>{contentCard.title}</h1>
         </div>
