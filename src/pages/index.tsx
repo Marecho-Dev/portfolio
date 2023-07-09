@@ -104,7 +104,7 @@ const Home: NextPage = () => {
               <a
                 href="#projects"
                 className={`flex items-center ${
-                  projectsInView
+                  projectsInView && !contactInView
                     ? "font-medium text-slate-50 shadow-slate-50 text-shadow-sm"
                     : "text-slate-200"
                 }`}
@@ -113,7 +113,7 @@ const Home: NextPage = () => {
                   <div className="h-5 border-l"></div>
                   <div
                     className={`h-3 w-3 rounded-full border border-gray-100 ${
-                      projectsInView ? "bg-slate-50" : ""
+                      projectsInView && !contactInView ? "bg-slate-50" : ""
                     }`}
                   ></div>
                   <div className="h-5 border-l"></div>
@@ -231,16 +231,16 @@ const Home: NextPage = () => {
           <div className="text-2xl">About</div>
           <div className="mt-1 w-full border-t border-slate-100"></div>
         </div>
-        <section className="w-50% flex min-h-[80vh] gap-10 bg-slate-900 ">
-          <div className="flex flex-col items-center  ">
+        <section className="w-50% flex min-h-[80vh] gap-10 bg-slate-900 3xl:ml-[20%] ">
+          <div className="flex flex-col items-center 3xl:flex-row  ">
             <div className="w-1/2">
-              <h1 className="pb-2 text-center text-6xl text-rose-300">
+              <h1 className="pb-2 text-center text-6xl text-rose-300 3xl:text-left">
                 Marek Staszkiewicz
               </h1>
-              <h2 className="pb-3 text-center text-3xl text-slate-300">
+              <h2 className="pb-3 text-center text-3xl text-slate-300 3xl:text-left">
                 Full Stack Developer
               </h2>
-              <p className=" text-slate-100">
+              <p className=" text-slate-100 3xl:pr-24 3xl:text-left">
                 As a Sr. Technology Analyst transitioning into the Full Stack
                 Developer realm, I bring a unique set of skills and experience.
                 With a degree in statistics, I have a solid foundation in data
@@ -260,11 +260,11 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div>
-              <div className="grid-col-1 mt-[5%] grid grid-cols-10 items-center justify-items-center gap-4">
+              <div className="grid-col-1 mt-[5%] grid grid-cols-10 items-center justify-items-center gap-4 3xl:grid-cols-4 3xl:gap-5">
                 {skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="my-5 flex h-14 w-14 flex-col items-center justify-center"
+                    className="my-5 flex h-14 w-14 flex-col items-center justify-center 3xl:h-24 3xl:w-24"
                   >
                     <div>
                       <img src={`../../../images/${skill}.svg`} alt={skill} />
@@ -284,7 +284,7 @@ const Home: NextPage = () => {
             <div className="text-2xl text-slate-100">Projects</div>
             <div className="mt-1 w-full border-t border-slate-100"></div>
           </div>
-          <section className="min-h-screen w-full bg-slate-900">
+          <section className="mb-[10vh] min-h-screen w-full bg-slate-900">
             {/* this next part is the project with card on right side */}
             <ContentCardRight {...mangaMood} />
             {/* this is project with card on left side */}
