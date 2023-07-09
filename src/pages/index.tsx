@@ -82,12 +82,18 @@ const Home: NextPage = () => {
               <a
                 href="#about"
                 className={`flex ${
-                  aboutInView ? "text-3xl text-yellow-300" : "text-slate-100"
+                  aboutInView
+                    ? "font-medium text-slate-50 shadow-slate-50 text-shadow-sm"
+                    : "text-slate-200"
                 } items-center`}
               >
                 <div className="flex flex-col items-center justify-center">
                   <div className="h-5"></div>
-                  <div className="h-3 w-3 rounded-full border border-gray-100"></div>
+                  <div
+                    className={`h-3 w-3 rounded-full border border-gray-100 ${
+                      aboutInView ? "bg-slate-50" : ""
+                    }`}
+                  ></div>
                   <div className="h-5 border-l"></div>
                 </div>
                 <div className="mt-1 w-5 border-t border-gray-100"></div>
@@ -98,12 +104,18 @@ const Home: NextPage = () => {
               <a
                 href="#projects"
                 className={`flex items-center ${
-                  projectsInView ? "text-3xl text-yellow-300" : "text-slate-100"
+                  projectsInView
+                    ? "font-medium text-slate-50 shadow-slate-50 text-shadow-sm"
+                    : "text-slate-200"
                 }`}
               >
                 <div className="flex flex-col items-center justify-center ">
                   <div className="h-5 border-l"></div>
-                  <div className="h-3 w-3 rounded-full border border-gray-100"></div>
+                  <div
+                    className={`h-3 w-3 rounded-full border border-gray-100 ${
+                      projectsInView ? "bg-slate-50" : ""
+                    }`}
+                  ></div>
                   <div className="h-5 border-l"></div>
                 </div>
                 <div className="mt-1 w-5 border-t border-gray-100"></div>
@@ -114,12 +126,18 @@ const Home: NextPage = () => {
               <a
                 href="#contact"
                 className={`flex items-center ${
-                  contactInView ? "text-3xl text-yellow-300" : "text-slate-100"
+                  contactInView
+                    ? "font-medium text-slate-50 shadow-slate-50 text-shadow-sm"
+                    : "text-slate-200"
                 }`}
               >
                 <div className="flex flex-col items-center justify-center">
                   <div className="h-5 border-l"></div>
-                  <div className="h-3 w-3 rounded-full border border-gray-100"></div>
+                  <div
+                    className={`h-3 w-3 rounded-full border border-gray-100 ${
+                      contactInView ? "bg-slate-50" : ""
+                    }`}
+                  ></div>
                   <div className="h-5"></div>
                 </div>
                 <div className="mt-1 w-5 border-t border-gray-100"></div>
