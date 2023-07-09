@@ -75,7 +75,7 @@ const Home: NextPage = () => {
           </div>
         </nav>
       </header> */}
-      <div className="fixed left-0 h-full  ">
+      <div className="fixed left-0 hidden h-full lg:block  ">
         <div className="ml-5 flex h-full w-full items-center justify-center">
           <ul className="flex flex-col text-2xl text-slate-100">
             <li>
