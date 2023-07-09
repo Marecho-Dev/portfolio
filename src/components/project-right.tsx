@@ -21,7 +21,7 @@ export const ContentCardRight = (contentCard: contentCard) => {
         inView ? "animate-slide-in-left opacity-100" : "opacity-0"
       } mx-[20%] flex h-[50vh]  pt-10 font-mono`}
     >
-      <div className="h-full w-[50%]">
+      <div className="h-full w-[100vh] lg:w-[50%]">
         <div className="relative h-full w-full">
           <img
             src={`${contentCard.jpg}`}
@@ -38,14 +38,14 @@ export const ContentCardRight = (contentCard: contentCard) => {
           )}
         </div>
       </div>
-      <div className="absolute right-[5%] h-[full] w-[60vh] flex-col 2xl:right-[20%] 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh]">
-        <div className="flex items-center justify-end pr-5 text-2xl text-slate-200 3xl:text-3xl">
+      <div className="absolute bottom-0 right-[0%] h-[full] w-[100%] flex-col bg-slate-900 opacity-[.95] md:right-[0%] lg:right-[5%] lg:top-20 lg:w-[60vh] lg:bg-inherit lg:opacity-100 2xl:right-[20%] 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh]">
+        <div className="flex items-center justify-center pr-5  text-2xl text-slate-200 lg:justify-end 3xl:text-3xl">
           <h1>{contentCard.title}</h1>
         </div>
-        <div className="mt-3 min-h-[30%] w-full bg-slate-200 p-5 text-xs text-slate-900 2xl:text-base">
+        <div className="mt-3 min-h-[30%] w-full p-5 text-xs text-slate-50 lg:bg-slate-200 lg:text-slate-900 2xl:text-base">
           {contentCard.summary}
         </div>
-        <div className="flex items-center justify-end gap-2  text-lg">
+        <div className="flex items-center justify-center gap-2 text-lg  lg:justify-end">
           {contentCard.tech.map((technology, index) => {
             return (
               <div key={index} className="px-2 py-1 text-slate-200">

@@ -260,7 +260,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div>
-              <div className="grid-col-1 mt-[5%] grid grid-cols-10 items-center justify-items-center gap-4 3xl:grid-cols-4 3xl:gap-5">
+              <div className="grid-col-1 sm:gird-cols-3 mt-[5%] grid grid-cols-10 items-center justify-items-center gap-4 md:grid-cols-4 3xl:grid-cols-4 3xl:gap-5">
                 {skills.map((skill, index) => (
                   <div
                     key={index}
