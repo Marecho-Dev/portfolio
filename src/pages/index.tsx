@@ -39,7 +39,7 @@ const Home: NextPage = () => {
   const mangaMoodAPI = {
     title: "Manga Mood Restful API",
     summary:
-      "estful API created using flask and python in order to perform machine learning on an input user to find mangas they should read next",
+      "Restful API created using flask and python in order to perform machine learning on an input user to find mangas they should read next",
     tech: ["Python", "Flask", "Pandas"],
     jpg: "/images/MM-API.jpg",
     alternateJPG: "",
