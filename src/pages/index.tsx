@@ -22,7 +22,7 @@ const Home: NextPage = () => {
   const mangaMood = {
     title: "Manga Mood",
     summary:
-      "Manga Mood is a full-stack SPA built using the T3 stack. It utilizes Machine Learning via a RESTful API in order to generate manga recommendations by comparing what you've rated on myanimelist to what other users have rated. If you don't have a myanimelist username, please use 'marecho' to test it out! Still a work in progress and I have long term plans for this project, but manga reocmmendations if functioning",
+      "Manga Mood is a full-stack SPA built using the T3 stack. It utilizes Machine Learning via a RESTful API in order to generate manga recommendations by comparing what you've rated on myanimelist to what other users have rated. If you don't have a myanimelist username, please use 'marecho' to test it out! Still a work in progress and I have long term plans for this project, but manga recommendations is functioning",
     tech: ["React", "TypeScript", "Tailwind"],
     jpg: "/images/MM.jpg",
     alternateJPG: "/images/Animation.gif",
@@ -243,7 +243,7 @@ const Home: NextPage = () => {
               <h2 className="pb-3 text-center text-lg text-slate-300 lg:text-3xl 3xl:text-left">
                 Full Stack Developer
               </h2>
-              <p className=" px-5 text-center text-slate-100 3xl:pr-24 3xl:text-left">
+              <p className=" px-5 text-slate-100 3xl:pr-24 3xl:text-left">
                 As a Sr. Technology Analyst transitioning into the Full Stack
                 Developer realm, I bring a unique set of skills and experience.
                 With a degree in statistics, I have a solid foundation in data
