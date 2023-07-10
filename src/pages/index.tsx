@@ -306,7 +306,7 @@ const Home: NextPage = () => {
           <div className="text-2xl">Contact</div>
           <div className="mt-1 w-full border-t border-slate-100"></div>
         </div>
-        <section className="relative w-full bg-slate-900 ">
+        <section className="w-full bg-slate-900 ">
           {" "}
           <div className="mx-[20%] pt-10 ">
             <h1 className="pb-10 text-center text-6xl text-rose-300">
@@ -334,7 +334,7 @@ const Home: NextPage = () => {
             </div>
             <div className="h-24"></div>
           </div>
-          <div className="absolute bottom-0 flex h-[6%] w-full flex-col items-center justify-center gap-2 bg-slate-900">
+          <div className="flex h-[6%] w-full flex-col items-center justify-center gap-2 bg-slate-900">
             <div className="flex w-full items-center justify-center gap-3">
               {/* <div className="w-[30%] border-t"></div> */}
               <a href="#home">
