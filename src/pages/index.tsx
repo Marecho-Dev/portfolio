@@ -57,8 +57,9 @@ const Home: NextPage = () => {
 
   const { ref: contactSectionRef, inView: contactInView } = useInView({
     threshold: 0.2,
-    rootMargin: "-100px 0px -300px 0px", // Adjust root margin as needed
+    rootMargin: "0px 0px -500px 0px", // Adjust root margin as needed
   });
+
   return (
     <div id="home" className="h-screen bg-slate-900 font-mono">
       {/* <header className="flex h-16 items-center justify-end bg-slate-600 pr-5 text-slate-100">
@@ -82,7 +83,7 @@ const Home: NextPage = () => {
               <a
                 href="#about"
                 className={`flex ${
-                  aboutInView
+                  aboutInView || projectsInView
                     ? "font-medium text-slate-50 shadow-slate-50 text-shadow-sm"
                     : "text-slate-200"
                 } items-center`}
@@ -157,11 +158,11 @@ const Home: NextPage = () => {
         </div> */}
         <div className="flex justify-center">
           <div className="w-full flex-col items-center justify-center">
-            <h1 className="pb-2 text-5xl text-slate-200  lg:text-9xl">
+            <h1 className="px-1 pb-2 text-4xl text-slate-200  lg:text-9xl">
               Hi, I'm Marek
             </h1>
             <div className="flex items-center">
-              <h2 className="animate-typewriter m-auto overflow-hidden whitespace-nowrap pb-3 text-2xl tracking-tighter text-slate-100 lg:text-6xl">
+              <h2 className="animate-typewriter text-1xl m-auto overflow-hidden whitespace-nowrap pb-3 tracking-tighter text-slate-100 lg:text-6xl">
                 <p>
                   Full Stack Developer
                   <span
@@ -172,7 +173,7 @@ const Home: NextPage = () => {
               </h2>
             </div>
             <div className="flex w-full items-center justify-center">
-              <p className="text-md text-md w-[60%] text-slate-100">
+              <p className="w-100% px-3 text-center text-xs text-slate-100 lg:w-[60%]">
                 Currently a Sr. Technology Analyst at{" "}
                 <span className="text-pink-200">@AutoNation</span>. Passionate
                 about react, machine learning, music and manga.
@@ -235,14 +236,14 @@ const Home: NextPage = () => {
         </div>
         <section className="lg:w-50% flex w-[100%] gap-10 bg-slate-900 lg:min-h-[80vh] 3xl:ml-[20%] ">
           <div className="flex flex-col items-center 3xl:flex-row  ">
-            <div className=" w-2/3 lg:w-1/2">
+            <div className=" w-full lg:w-1/2">
               <h1 className="pb-2 text-center text-3xl text-rose-300 lg:text-6xl 3xl:text-left">
                 Marek Staszkiewicz
               </h1>
               <h2 className="pb-3 text-center text-lg text-slate-300 lg:text-3xl 3xl:text-left">
                 Full Stack Developer
               </h2>
-              <p className=" text-slate-100 3xl:pr-24 3xl:text-left">
+              <p className=" px-5 text-center text-slate-100 3xl:pr-24 3xl:text-left">
                 As a Sr. Technology Analyst transitioning into the Full Stack
                 Developer realm, I bring a unique set of skills and experience.
                 With a degree in statistics, I have a solid foundation in data
@@ -314,56 +315,56 @@ const Home: NextPage = () => {
             <div className="flex h-96 w-full flex-col items-center">
               <input
                 placeholder="Name"
-                className=" rounder-sm mb-10 w-1/3 bg-slate-200 py-2 pl-2 text-lg "
+                className=" rounder-sm mb-10 w-full bg-slate-200 py-2 pl-2 text-lg md:w-1/3 "
                 type="text"
               />
               <input
                 placeholder="Email"
-                className=" rounder-sm mb-10  w-1/3 bg-slate-200 py-2 pl-2 text-lg "
+                className=" rounder-sm mb-10  w-full bg-slate-200 py-2 pl-2 text-lg md:w-1/3 "
                 type="text"
               />
               <textarea
                 placeholder="Message"
-                className="text-md min-h-1/2 w-1/3 resize-y rounded-sm bg-slate-200 py-2 pl-2"
+                className="text-md min-h-1/2 w-full resize-y rounded-sm bg-slate-200 py-2 pl-2 md:w-1/3"
               ></textarea>
 
-              <button className="mt-5 w-[10%] rounded-md bg-rose-200 px-2 py-2 text-slate-700">
+              <button className="mt-5 w-[40%] rounded-md bg-rose-200 px-2 py-2 text-slate-700 md:w-[10%]">
                 Submit
               </button>
             </div>
             <div className="h-24"></div>
           </div>
+          <div className="flex h-[6%] w-full flex-col items-center justify-center gap-2 bg-slate-900">
+            <div className="flex w-full items-center justify-center gap-3">
+              {/* <div className="w-[30%] border-t"></div> */}
+              <a href="#home">
+                <button className="aspect-square h-8 w-8 rounded-full border border-slate-100 px-2">
+                  <img src={"../../../images/up-arrow.svg"} alt="Your SVG" />
+                </button>
+              </a>
+              {/* <div className="w-[30%] border-t "></div> */}
+            </div>
+            <div className="flex items-center justify-center gap-2 text-center text-slate-100">
+              Made by Marek Staszkiewicz{" "}
+              <span>
+                <button className="flex aspect-square h-5 w-5 items-center">
+                  <a
+                    href="https://github.com/Mareks1993/portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={"../../../images/github.svg"}
+                      className="text-slate-100"
+                      alt="Your SVG"
+                    />
+                  </a>
+                </button>
+              </span>
+            </div>
+          </div>
         </section>
       </main>
-      <div className="flex h-[6%] w-full flex-col items-center justify-center gap-2 bg-slate-900">
-        <div className="flex w-full items-center justify-center gap-3">
-          {/* <div className="w-[30%] border-t"></div> */}
-          <a href="#home">
-            <button className="aspect-square h-8 w-8 rounded-full border border-slate-100 px-2">
-              <img src={"../../../images/up-arrow.svg"} alt="Your SVG" />
-            </button>
-          </a>
-          {/* <div className="w-[30%] border-t "></div> */}
-        </div>
-        <div className="flex items-center justify-center gap-2 text-center text-slate-100">
-          Made by Marek Staszkiewicz{" "}
-          <span>
-            <button className="flex aspect-square h-5 w-5 items-center">
-              <a
-                href="https://github.com/Mareks1993/portfolio"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={"../../../images/github.svg"}
-                  className="text-slate-100"
-                  alt="Your SVG"
-                />
-              </a>
-            </button>
-          </span>
-        </div>
-      </div>
     </div>
   );
 };
