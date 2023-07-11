@@ -68,7 +68,14 @@ const Home: NextPage = () => {
 
   return (
     //parent div
-    <div id="home" className="relative h-screen bg-slate-900 font-mono">
+    <div
+      id="home"
+      className={`relative h-screen font-mono text-slate-50 ${
+        isMoved
+          ? "border-slate-900 bg-slate-50 text-slate-900"
+          : "border-slate-100 bg-slate-900"
+      }`}
+    >
       {/* absolute light/dark pill toggle */}
       <button
         onClick={handleButtonClick}
@@ -86,26 +93,26 @@ const Home: NextPage = () => {
       {/* fixed nav panel left side of page */}
       <div className="fixed left-0 hidden h-full lg:block  ">
         <div className="ml-5 flex h-full w-full items-center justify-center">
-          <ul className="flex flex-col text-2xl text-slate-100">
+          <ul className="flex flex-col text-2xl">
             <li>
               <a
                 href="#about"
                 className={`flex ${
                   aboutInView || projectsInView
-                    ? "font-medium text-slate-50 shadow-slate-50 text-shadow-sm"
+                    ? "font-medium shadow-slate-50 text-shadow-sm"
                     : "text-slate-200"
                 } items-center`}
               >
                 <div className="flex flex-col items-center justify-center">
                   <div className="h-5"></div>
                   <div
-                    className={`h-3 w-3 rounded-full border border-gray-100 ${
+                    className={`h-3 w-3 rounded-full border  ${
                       aboutInView ? "bg-slate-50" : ""
                     }`}
                   ></div>
                   <div className="h-5 border-l"></div>
                 </div>
-                <div className="mt-1 w-5 border-t border-gray-100"></div>
+                <div className="mt-1 w-5 border-t "></div>
                 <span className="pl-1">About</span>
               </a>
             </li>
@@ -114,20 +121,20 @@ const Home: NextPage = () => {
                 href="#projects"
                 className={`flex items-center ${
                   projectsInView && !contactInView
-                    ? "font-medium text-slate-50 shadow-slate-50 text-shadow-sm"
+                    ? "font-medium shadow-slate-50 text-shadow-sm"
                     : "text-slate-200"
                 }`}
               >
                 <div className="flex flex-col items-center justify-center ">
                   <div className="h-5 border-l"></div>
                   <div
-                    className={`h-3 w-3 rounded-full border border-gray-100 ${
+                    className={`h-3 w-3 rounded-full border  ${
                       projectsInView && !contactInView ? "bg-slate-50" : ""
                     }`}
                   ></div>
                   <div className="h-5 border-l"></div>
                 </div>
-                <div className="mt-1 w-5 border-t border-gray-100"></div>
+                <div className="mt-1 w-5 border-t "></div>
                 <span className="pl-1">Projects</span>
               </a>
             </li>
@@ -136,20 +143,20 @@ const Home: NextPage = () => {
                 href="#contact"
                 className={`flex items-center ${
                   contactInView
-                    ? "font-medium text-slate-50 shadow-slate-50 text-shadow-sm"
+                    ? "font-medium  shadow-slate-50 text-shadow-sm"
                     : "text-slate-200"
                 }`}
               >
                 <div className="flex flex-col items-center justify-center">
                   <div className="h-5 border-l"></div>
                   <div
-                    className={`h-3 w-3 rounded-full border border-gray-100 ${
+                    className={`h-3 w-3 rounded-full border  ${
                       contactInView ? "bg-slate-50" : ""
                     }`}
                   ></div>
                   <div className="h-5"></div>
                 </div>
-                <div className="mt-1 w-5 border-t border-gray-100"></div>
+                <div className="mt-1 w-5 border-t "></div>
                 <span className="pl-1">Contact</span>
               </a>
             </li>
@@ -158,34 +165,29 @@ const Home: NextPage = () => {
       </div>
       {/* first setion is the introduction with all my links */}
       <section className="flex h-full w-full items-center justify-center gap-10 text-center">
-        {/* <div className="ml-[20%] mt-[10%] h-[50%] w-[30%]">
-          <img
-            src="/images/Marek.jpg"
-            alt="Manga Mood"
-            className="h-full w-full object-cover"
-          />
-        </div> */}
         <div className="flex justify-center">
           <div className="w-full flex-col items-center justify-center">
-            <h1 className="px-1 pb-2 text-4xl text-slate-200  lg:text-9xl">
-              Hi, I'm Marek
-            </h1>
+            <h1 className="px-1 pb-2 text-4xl  lg:text-9xl">Hi, I'm Marek</h1>
             <div className="flex items-center">
-              <h2 className="animate-typewriter text-1xl m-auto overflow-hidden whitespace-nowrap pb-3 tracking-tighter text-slate-100 lg:text-6xl">
+              <h2 className="animate-typewriter text-1xl m-auto overflow-hidden whitespace-nowrap pb-3 tracking-tighter  lg:text-6xl">
                 <p>
                   Full Stack Developer
                   <span
-                    className="animate-blink-caret h-2/3 border border-slate-100 text-4xl lg:h-full lg:border-2"
+                    className="animate-blink-caret h-2/3 border  text-4xl lg:h-full lg:border-2"
                     style={{ height: "80%", marginTop: 0 }}
                   ></span>
                 </p>
               </h2>
             </div>
             <div className="flex w-full items-center justify-center">
-              <p className="w-100% px-3 text-center text-xs text-slate-100 lg:w-[60%]">
+              <p className="w-100% px-3 text-center text-xs  lg:w-[60%]">
                 Currently a Sr. Technology Analyst at{" "}
-                <span className="text-pink-200">@AutoNation</span>. Passionate
-                about react, machine learning, music and manga.
+                <span
+                  className={`${isMoved ? "text-pink-400" : "text-pink-200"}`}
+                >
+                  @AutoNation
+                </span>
+                . Passionate about react, machine learning, music and manga.
               </p>
             </div>
             <div className="w-full flex-col items-center justify-center gap-2 pt-5">
@@ -196,14 +198,10 @@ const Home: NextPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={"../../../images/github.svg"}
-                      className="text-slate-100"
-                      alt="Your SVG"
-                    />
+                    <img src={"../../../images/github.svg"} alt="Your SVG" />
                   </a>
                 </button>
-                <button className="aspect-square h-10 w-10 text-slate-100">
+                <button className="aspect-square h-10 w-10 ">
                   <a
                     href="https://www.linkedin.com/in/marek-staszkiewicz-022358123/"
                     target="_blank"
@@ -212,7 +210,7 @@ const Home: NextPage = () => {
                     <img src={"../../../images/in.svg"} alt="Your SVG" />
                   </a>
                 </button>
-                <button className="flex aspect-square h-10 w-10 items-end text-slate-100">
+                <button className="flex aspect-square h-10 w-10 items-end ">
                   <a href="mailto:marekstaszkiewicz@live.com">
                     <img src={"../../../images/mail.svg"} alt="Your SVG" />
                   </a>
@@ -223,9 +221,7 @@ const Home: NextPage = () => {
                   href="../../../images/Marek Staszkiewicz Resume.pdf"
                   download
                 >
-                  <button className="border border-slate-100 px-2 py-1 text-slate-100">
-                    Resume
-                  </button>
+                  <button className="border px-2 py-1 ">Resume</button>
                 </a>
               </div>
             </div>
@@ -237,22 +233,26 @@ const Home: NextPage = () => {
         <div
           id="about"
           ref={aboutSectionRef}
-          className="flex w-full items-center gap-2 px-[18%] text-slate-100"
+          className="flex w-full items-center gap-2 px-[18%] "
         >
           <div className="mt-5">01</div>
           <div className="text-2xl">About</div>
-          <div className="mt-1 w-full border-t border-slate-100"></div>
+          <div className="mt-1 w-full border-t"></div>
         </div>
         <section className="lg:w-50% flex w-[100%] gap-10 lg:min-h-[80vh] 3xl:ml-[20%] ">
           <div className="flex flex-col items-center 3xl:flex-row  ">
             <div className=" w-full lg:w-1/2">
-              <h1 className="pb-2 text-center text-3xl text-rose-300 lg:text-6xl 3xl:text-left">
+              <h1
+                className={`pb-2 text-center text-3xl ${
+                  isMoved ? "text-rose-400" : "text-rose-300"
+                } lg:text-6xl 3xl:text-left`}
+              >
                 Marek Staszkiewicz
               </h1>
               <h2 className="pb-3 text-center text-lg text-slate-300 lg:text-3xl 3xl:text-left">
                 Full Stack Developer
               </h2>
-              <p className=" px-5 text-slate-100 3xl:pr-24 3xl:text-left">
+              <p className=" px-5  3xl:pr-24 3xl:text-left">
                 As a Sr. Technology Analyst transitioning into the Full Stack
                 Developer realm, I bring a unique set of skills and experience.
                 With a degree in statistics, I have a solid foundation in data
@@ -281,9 +281,7 @@ const Home: NextPage = () => {
                     <div>
                       <img src={`../../../images/${skill}.svg`} alt={skill} />
                     </div>
-                    <div className="text-center text-xs text-slate-100">
-                      {skill}
-                    </div>
+                    <div className="text-center text-xs ">{skill}</div>
                   </div>
                 ))}
               </div>
@@ -292,9 +290,9 @@ const Home: NextPage = () => {
         </section>
         <div id="projects" ref={projectsSectionRef}>
           <div className="flex w-full items-center gap-2 px-[18%]">
-            <div className="mt-5 text-slate-100">02</div>
-            <div className="text-2xl text-slate-100">Projects</div>
-            <div className="mt-1 w-full border-t border-slate-100"></div>
+            <div className="mt-5 ">02</div>
+            <div className="text-2xl ">Projects</div>
+            <div className="mt-1 w-full border-t "></div>
           </div>
           <section className="mb-[10vh] min-h-screen w-full">
             {/* this next part is the project with card on right side */}
@@ -309,11 +307,11 @@ const Home: NextPage = () => {
         <div
           id="contact"
           ref={contactSectionRef}
-          className="flex w-full items-center gap-2 px-[18%] pt-10 text-slate-100"
+          className="flex w-full items-center gap-2 px-[18%] pt-10 "
         >
           <div className="mt-5">03</div>
           <div className="text-2xl">Contact</div>
-          <div className="mt-1 w-full border-t border-slate-100"></div>
+          <div className="mt-1 w-full border-t "></div>
         </div>
         <section className="w-full ">
           {" "}
@@ -347,13 +345,13 @@ const Home: NextPage = () => {
             <div className="flex w-full items-center justify-center gap-3">
               {/* <div className="w-[30%] border-t"></div> */}
               <a href="#home">
-                <button className="aspect-square h-8 w-8 rounded-full border border-slate-100 px-2">
+                <button className="aspect-square h-8 w-8 rounded-full border  px-2">
                   <img src={"../../../images/up-arrow.svg"} alt="Your SVG" />
                 </button>
               </a>
               {/* <div className="w-[30%] border-t "></div> */}
             </div>
-            <div className="flex items-center justify-center gap-2 text-center text-slate-100">
+            <div className="flex items-center justify-center gap-2 text-center ">
               Made by Marek Staszkiewicz{" "}
               <span>
                 <button className="flex aspect-square h-5 w-5 items-center">
@@ -362,11 +360,7 @@ const Home: NextPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={"../../../images/github.svg"}
-                      className="text-slate-100"
-                      alt="Your SVG"
-                    />
+                    <img src={"../../../images/github.svg"} alt="Your SVG" />
                   </a>
                 </button>
               </span>
