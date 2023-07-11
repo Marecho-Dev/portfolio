@@ -71,9 +71,7 @@ const Home: NextPage = () => {
     <div
       id="home"
       className={`relative h-screen font-mono text-slate-50 ${
-        isMoved
-          ? "border-slate-900 bg-slate-50 text-slate-900"
-          : "border-slate-100 bg-slate-900"
+        isMoved ? "bg-slate-50 text-slate-900" : "bg-slate-900"
       }`}
     >
       {/* absolute light/dark pill toggle */}
@@ -106,58 +104,131 @@ const Home: NextPage = () => {
                 <div className="flex flex-col items-center justify-center">
                   <div className="h-5"></div>
                   <div
-                    className={`h-3 w-3 rounded-full border  ${
-                      aboutInView ? "bg-slate-50" : ""
-                    }`}
+                    className={`h-3 w-3 rounded-full border ${
+                      isMoved ? "border-slate-900 " : "border-slate-50"
+                    } 
+                    ${aboutInView && isMoved ? "bg-slate-900" : ""}
+                    ${aboutInView && !isMoved ? "bg-slate-50" : ""}
+                    `}
                   ></div>
-                  <div className="h-5 border-l"></div>
+                  <div
+                    className={`h-5 border-l ${
+                      isMoved ? "border-slate-900" : "border-slate-50"
+                    } `}
+                  ></div>
                 </div>
-                <div className="mt-1 w-5 border-t "></div>
-                <span className="pl-1">About</span>
+                <div
+                  className={`mt-1 w-5 border-t ${
+                    isMoved ? "border-slate-900" : "border-slate-50"
+                  }`}
+                ></div>
+                <span
+                  className={`pl-1 ${
+                    isMoved ? "text-slate-900" : "text-slate-50"
+                  }`}
+                >
+                  About
+                </span>
               </a>
             </li>
             <li>
               <a
                 href="#projects"
                 className={`flex items-center ${
-                  projectsInView && !contactInView
-                    ? "font-medium shadow-slate-50 text-shadow-sm"
-                    : "text-slate-200"
+                  projectsInView && !contactInView && !isMoved
+                    ? "text-3xl shadow-slate-50 text-shadow-sm"
+                    : ""
+                }
+                ${
+                  projectsInView && !contactInView && isMoved
+                    ? "text-3xl shadow-slate-300 text-shadow-sm"
+                    : ""
                 }`}
               >
                 <div className="flex flex-col items-center justify-center ">
-                  <div className="h-5 border-l"></div>
                   <div
-                    className={`h-3 w-3 rounded-full border  ${
-                      projectsInView && !contactInView ? "bg-slate-50" : ""
+                    className={`h-5 border-l ${
+                      isMoved ? "border-slate-900" : "border-slate-50"
                     }`}
                   ></div>
-                  <div className="h-5 border-l"></div>
+                  <div
+                    className={`h-3 w-3 rounded-full border ${
+                      isMoved ? "border-slate-900" : "border-slate-50"
+                    } 
+                      ${
+                        projectsInView && !contactInView && isMoved
+                          ? "bg-slate-900"
+                          : ""
+                      }
+                      ${
+                        projectsInView && !contactInView && !isMoved
+                          ? "bg-slate-50"
+                          : ""
+                      }
+                        `}
+                  ></div>
+                  <div
+                    className={`h-5 border-l ${
+                      isMoved ? " border-slate-900" : "border-slate-50"
+                    } `}
+                  ></div>
                 </div>
-                <div className="mt-1 w-5 border-t "></div>
-                <span className="pl-1">Projects</span>
+                <div
+                  className={`mt-1 w-5 border-t ${
+                    isMoved ? "border-slate-900" : "border-slate-50"
+                  }`}
+                ></div>
+                <span
+                  className={`pl-1 ${
+                    isMoved ? "text-slate-900 " : "text-slate-50}"
+                  }`}
+                >
+                  Projects
+                </span>
               </a>
             </li>
             <li>
               <a
                 href="#contact"
                 className={`flex items-center ${
-                  contactInView
-                    ? "font-medium  shadow-slate-50 text-shadow-sm"
-                    : "text-slate-200"
+                  contactInView && !isMoved
+                    ? "text-3xl shadow-slate-50 text-shadow-sm "
+                    : ""
+                }
+                ${
+                  contactInView && isMoved
+                    ? "text-3xl  shadow-slate-300 text-shadow-sm"
+                    : ""
                 }`}
               >
                 <div className="flex flex-col items-center justify-center">
-                  <div className="h-5 border-l"></div>
                   <div
-                    className={`h-3 w-3 rounded-full border  ${
-                      contactInView ? "bg-slate-50" : ""
+                    className={`h-5 border-l ${
+                      isMoved ? "border-slate-900" : "border-slate-50"
                     }`}
+                  ></div>
+                  <div
+                    className={`h-3 w-3 rounded-full border ${
+                      isMoved ? "border-slate-900" : "border-slate-50"
+                    } 
+                    ${contactInView && isMoved ? "bg-slate-900" : ""}
+                    ${contactInView && !isMoved ? "bg-slate-50" : ""}
+                    `}
                   ></div>
                   <div className="h-5"></div>
                 </div>
-                <div className="mt-1 w-5 border-t "></div>
-                <span className="pl-1">Contact</span>
+                <div
+                  className={`mt-1 w-5 border-t ${
+                    isMoved ? "border-slate-900" : "border-slate-50"
+                  }`}
+                ></div>
+                <span
+                  className={`pl-1 ${
+                    isMoved ? "text-slate-900 " : "text-slate-50"
+                  }`}
+                >
+                  Contact
+                </span>
               </a>
             </li>
           </ul>
@@ -173,7 +244,9 @@ const Home: NextPage = () => {
                 <p>
                   Full Stack Developer
                   <span
-                    className="animate-blink-caret h-2/3 border  text-4xl lg:h-full lg:border-2"
+                    className={`animate-blink-caret h-2/3 border ${
+                      isMoved ? "border-slate-900" : "border-slate-50"
+                    } text-4xl lg:h-full lg:border-2`}
                     style={{ height: "80%", marginTop: 0 }}
                   ></span>
                 </p>
@@ -221,7 +294,13 @@ const Home: NextPage = () => {
                   href="../../../images/Marek Staszkiewicz Resume.pdf"
                   download
                 >
-                  <button className="border px-2 py-1 ">Resume</button>
+                  <button
+                    className={`border ${
+                      isMoved ? "border-slate-900" : "border-slate-50"
+                    } px-2 py-1 `}
+                  >
+                    Resume
+                  </button>
                 </a>
               </div>
             </div>
@@ -229,7 +308,7 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <main>
+      <main className="bg-inherit">
         <div
           id="about"
           ref={aboutSectionRef}
@@ -237,19 +316,27 @@ const Home: NextPage = () => {
         >
           <div className="mt-5">01</div>
           <div className="text-2xl">About</div>
-          <div className="mt-1 w-full border-t"></div>
+          <div
+            className={`mt-1 w-full border-t ${
+              isMoved ? "border-slate-900" : "border-slate-50"
+            }`}
+          ></div>
         </div>
-        <section className="lg:w-50% flex w-[100%] gap-10 lg:min-h-[80vh] 3xl:ml-[20%] ">
-          <div className="flex flex-col items-center 3xl:flex-row  ">
-            <div className=" w-full lg:w-1/2">
+        <section className="lg:w-50% flex w-full gap-10 lg:min-h-[80vh]  ">
+          <div className="flex flex-col items-center">
+            <div className=" w-full lg:w-[40%]">
               <h1
-                className={`pb-2 text-center text-3xl ${
+                className={`mt-[10%] pb-2 text-center text-3xl ${
                   isMoved ? "text-rose-400" : "text-rose-300"
                 } lg:text-6xl 3xl:text-left`}
               >
                 Marek Staszkiewicz
               </h1>
-              <h2 className="pb-3 text-center text-lg text-slate-300 lg:text-3xl 3xl:text-left">
+              <h2
+                className={`pb-3 text-center text-lg ${
+                  isMoved ? "text-slate-600" : "text-slate-300"
+                } lg:text-3xl 3xl:text-left`}
+              >
                 Full Stack Developer
               </h2>
               <p className=" px-5  3xl:pr-24 3xl:text-left">
@@ -272,7 +359,7 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div>
-              <div className="grid-col-1 sm:gird-cols-3 mt-[5%] grid grid-cols-4 items-center justify-items-center gap-4 md:grid-cols-4 lg:grid-cols-10 3xl:grid-cols-4 3xl:gap-5">
+              <div className="grid-col-1 sm:gird-cols-3 mt-[5%] grid grid-cols-4 items-center justify-items-center gap-4 md:grid-cols-4 lg:grid-cols-10 3xl:grid-cols-10 3xl:gap-5">
                 {skills.map((skill, index) => (
                   <div
                     key={index}
@@ -292,15 +379,19 @@ const Home: NextPage = () => {
           <div className="flex w-full items-center gap-2 px-[18%]">
             <div className="mt-5 ">02</div>
             <div className="text-2xl ">Projects</div>
-            <div className="mt-1 w-full border-t "></div>
+            <div
+              className={`mt-1 w-full border-t ${
+                isMoved ? "border-slate-900" : "border-slate-50"
+              }`}
+            ></div>
           </div>
           <section className="mb-[10vh] min-h-screen w-full">
             {/* this next part is the project with card on right side */}
-            <ContentCardRight {...mangaMood} />
+            <ContentCardRight {...mangaMood} isMoved={isMoved} />
             {/* this is project with card on left side */}
-            <ContentCardLeft {...mangaMoodAPI} />
+            <ContentCardLeft {...mangaMoodAPI} isMoved={isMoved} />
             {/* this is end of project with card on left side */}
-            <ContentCardRight {...metalGeneral} />
+            <ContentCardRight {...metalGeneral} isMoved={isMoved} />
             {/* this is end of project with card on right side */}
           </section>
         </div>
@@ -311,7 +402,11 @@ const Home: NextPage = () => {
         >
           <div className="mt-5">03</div>
           <div className="text-2xl">Contact</div>
-          <div className="mt-1 w-full border-t "></div>
+          <div
+            className={`mt-1 w-full border-t ${
+              isMoved ? "border-slate-900" : "border-slate-50"
+            }`}
+          ></div>
         </div>
         <section className="w-full ">
           {" "}
@@ -322,17 +417,29 @@ const Home: NextPage = () => {
             <div className="flex h-96 w-full flex-col items-center">
               <input
                 placeholder="Name"
-                className=" rounder-sm mb-10 w-full bg-slate-200 py-2 pl-2 text-lg md:w-1/3 "
+                className={` rounder-sm mb-10 w-full ${
+                  isMoved
+                    ? "bg-slate-600 text-slate-50"
+                    : "bg-slate-200 text-slate-900"
+                } py-2 pl-2 text-lg md:w-1/3 `}
                 type="text"
               />
               <input
                 placeholder="Email"
-                className=" rounder-sm mb-10  w-full bg-slate-200 py-2 pl-2 text-lg md:w-1/3 "
+                className={` rounder-sm mb-10  w-full ${
+                  isMoved
+                    ? "bg-slate-600 text-slate-50"
+                    : "bg-slate-200 text-slate-900"
+                } py-2 pl-2 text-lg md:w-1/3 `}
                 type="text"
               />
               <textarea
                 placeholder="Message"
-                className="text-md min-h-1/2 w-full resize-y rounded-sm bg-slate-200 py-2 pl-2 md:w-1/3"
+                className={`text-md min-h-1/2 w-full resize-y rounded-sm ${
+                  isMoved
+                    ? "bg-slate-600 text-slate-50"
+                    : "bg-slate-200 text-slate-900"
+                }  py-2 pl-2 md:w-1/3`}
               ></textarea>
 
               <button className="mt-5 w-[40%] rounded-md bg-rose-200 px-2 py-2 text-slate-700 md:w-[10%]">
@@ -345,7 +452,11 @@ const Home: NextPage = () => {
             <div className="flex w-full items-center justify-center gap-3">
               {/* <div className="w-[30%] border-t"></div> */}
               <a href="#home">
-                <button className="aspect-square h-8 w-8 rounded-full border  px-2">
+                <button
+                  className={`aspect-square h-8 w-8 rounded-full border ${
+                    isMoved ? "border-slate-900" : "border-slate-50"
+                  } px-2`}
+                >
                   <img src={"../../../images/up-arrow.svg"} alt="Your SVG" />
                 </button>
               </a>
