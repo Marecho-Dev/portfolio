@@ -92,8 +92,8 @@ const Home: NextPage = () => {
     summary:
       "Personal portfolio which is built with React, TypeScript, and Tailwind. Uses the Formik and EmailJS libraries in order to handle contact form validation and submission. Hot-react-toast is used for error/success messages!",
     tech: ["React", "TypeScript", "Tailwind"],
-    jpg: "/images/portfolio-pic.jpg",
-    alternateJPG: "",
+    jpg: "/images/portfolio-pic-3.jpg",
+    alternateJPG: "/images/portfolio-gif.gif",
   };
   const mangaMoodAPI = {
     title: "MAL REC Restful API",
