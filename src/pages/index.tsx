@@ -3,8 +3,14 @@ import { type NextPage } from "next";
 import ContentCardLeft from "~/components/project-left";
 import { ContentCardRight } from "~/components/project-right";
 import { useInView } from "react-intersection-observer";
+import React, { useState } from "react";
 
 const Home: NextPage = () => {
+  const [isMoved, setIsMoved] = useState(false);
+  const handleButtonClick = () => {
+    setIsMoved(!isMoved);
+  };
+
   const skills = [
     "MySQL",
     "Javascript",
@@ -61,7 +67,17 @@ const Home: NextPage = () => {
   });
 
   return (
-    <div id="home" className="h-screen bg-slate-900 font-mono">
+    <div id="home" className="relative h-screen bg-slate-900 font-mono">
+      <button
+        onClick={handleButtonClick}
+        className="absolute right-2 top-2 h-[5%] w-[15%] rounded-full bg-slate-800 md:h-[2%] md:w-[2%]"
+      >
+        <div
+          className={`ml-2 h-[60%] w-[30%] rounded-full bg-slate-50 ${
+            isMoved ? "ml-auto mr-2" : ""
+          }`}
+        ></div>
+      </button>
       {/* <header className="flex h-16 items-center justify-end bg-slate-600 pr-5 text-slate-100">
         <nav className="flex w-full">
           <div className="flex w-[30%] items-center gap-1 pl-5">
