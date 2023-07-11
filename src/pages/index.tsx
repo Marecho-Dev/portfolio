@@ -469,25 +469,25 @@ const Home: NextPage = () => {
             <div className="flex h-96 w-full flex-col items-center">
               <input
                 placeholder="Name"
-                className={` rounder-sm mb-10 w-full ${
+                className={` rounder-sm mb-10 w-full focus:border-2 ${
                   isMoved
-                    ? "border border-rose-300 bg-slate-50 text-slate-900"
+                    ? "border border-rose-300 bg-slate-50 text-slate-900 outline-none"
                     : "bg-slate-200 text-slate-900"
                 } py-2 pl-2 text-lg md:w-1/3 `}
                 type="text"
               />
               <input
                 placeholder="Email"
-                className={` rounder-sm mb-10  w-full ${
+                className={` rounder-sm mb-10 w-full outline-none focus:border-2 ${
                   isMoved
-                    ? "border border-rose-300 bg-slate-50 text-slate-900"
+                    ? "border border-rose-300 bg-slate-50  text-slate-900"
                     : "bg-slate-200 text-slate-900"
                 } py-2 pl-2 text-lg md:w-1/3 `}
                 type="text"
               />
               <textarea
                 placeholder="Message"
-                className={`text-md min-h-1/2 w-full resize-y rounded-sm ${
+                className={`text-md min-h-1/2 w-full resize-y rounded-sm outline-none focus:border-2 ${
                   isMoved
                     ? "border border-rose-300 bg-slate-50 text-slate-900"
                     : "bg-slate-200 text-slate-900"
