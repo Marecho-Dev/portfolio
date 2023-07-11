@@ -87,12 +87,12 @@ const Home: NextPage = () => {
     alternateJPG: "/images/Animation.gif",
   };
 
-  const metalGeneral = {
-    title: "Metal General",
+  const personalPortfolio = {
+    title: "Personal Portfolio",
     summary:
-      "ERP Built for the company Metal General which is built upon the T3 stack using supabase",
+      "Personal portfolio which is built with React, TypeScript, and Tailwind. Uses the Formik and EmailJS libraries in order to handle contact form validation and submission. Hot-react-toast is used for error/success messages!",
     tech: ["React", "TypeScript", "Tailwind"],
-    jpg: "/images/metal-general.jpg",
+    jpg: "/images/portfolio-pic.jpg",
     alternateJPG: "",
   };
   const mangaMoodAPI = {
@@ -535,7 +535,7 @@ const Home: NextPage = () => {
               {/* this is project with card on left side */}
               <ContentCardLeft {...mangaMoodAPI} isMoved={isMoved} />
               {/* this is end of project with card on left side */}
-              <ContentCardRight {...metalGeneral} isMoved={isMoved} />
+              <ContentCardRight {...personalPortfolio} isMoved={isMoved} />
               {/* this is end of project with card on right side */}
             </section>
           </div>
