@@ -67,7 +67,9 @@ const Home: NextPage = () => {
   });
 
   return (
+    //parent div
     <div id="home" className="relative h-screen bg-slate-900 font-mono">
+      {/* absolute light/dark pill toggle */}
       <button
         onClick={handleButtonClick}
         style={{
@@ -81,20 +83,7 @@ const Home: NextPage = () => {
           }`}
         ></div>
       </button>
-      {/* <header className="flex h-16 items-center justify-end bg-slate-600 pr-5 text-slate-100">
-        <nav className="flex w-full">
-          <div className="flex w-[30%] items-center gap-1 pl-5">
-            <div>Marek Staszkiewicz</div>
-          </div>
-          <div className="flex w-full justify-end">
-            <ul className="flex gap-5">
-              <li>About</li>
-              <li>Projects</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-        </nav>
-      </header> */}
+      {/* fixed nav panel left side of page */}
       <div className="fixed left-0 hidden h-full lg:block  ">
         <div className="ml-5 flex h-full w-full items-center justify-center">
           <ul className="flex flex-col text-2xl text-slate-100">
@@ -167,7 +156,8 @@ const Home: NextPage = () => {
           </ul>
         </div>
       </div>
-      <section className="flex h-full w-full items-center justify-center gap-10 bg-slate-900 text-center">
+      {/* first setion is the introduction with all my links */}
+      <section className="flex h-full w-full items-center justify-center gap-10 text-center">
         {/* <div className="ml-[20%] mt-[10%] h-[50%] w-[30%]">
           <img
             src="/images/Marek.jpg"
@@ -247,13 +237,13 @@ const Home: NextPage = () => {
         <div
           id="about"
           ref={aboutSectionRef}
-          className="flex w-full items-center gap-2 bg-slate-900 px-[18%] text-slate-100"
+          className="flex w-full items-center gap-2 px-[18%] text-slate-100"
         >
           <div className="mt-5">01</div>
           <div className="text-2xl">About</div>
           <div className="mt-1 w-full border-t border-slate-100"></div>
         </div>
-        <section className="lg:w-50% flex w-[100%] gap-10 bg-slate-900 lg:min-h-[80vh] 3xl:ml-[20%] ">
+        <section className="lg:w-50% flex w-[100%] gap-10 lg:min-h-[80vh] 3xl:ml-[20%] ">
           <div className="flex flex-col items-center 3xl:flex-row  ">
             <div className=" w-full lg:w-1/2">
               <h1 className="pb-2 text-center text-3xl text-rose-300 lg:text-6xl 3xl:text-left">
@@ -301,12 +291,12 @@ const Home: NextPage = () => {
           </div>
         </section>
         <div id="projects" ref={projectsSectionRef}>
-          <div className="flex w-full items-center gap-2 bg-slate-900 px-[18%]">
+          <div className="flex w-full items-center gap-2 px-[18%]">
             <div className="mt-5 text-slate-100">02</div>
             <div className="text-2xl text-slate-100">Projects</div>
             <div className="mt-1 w-full border-t border-slate-100"></div>
           </div>
-          <section className="mb-[10vh] min-h-screen w-full bg-slate-900">
+          <section className="mb-[10vh] min-h-screen w-full">
             {/* this next part is the project with card on right side */}
             <ContentCardRight {...mangaMood} />
             {/* this is project with card on left side */}
@@ -319,13 +309,13 @@ const Home: NextPage = () => {
         <div
           id="contact"
           ref={contactSectionRef}
-          className="flex w-full items-center gap-2 bg-slate-900 px-[18%] pt-10 text-slate-100"
+          className="flex w-full items-center gap-2 px-[18%] pt-10 text-slate-100"
         >
           <div className="mt-5">03</div>
           <div className="text-2xl">Contact</div>
           <div className="mt-1 w-full border-t border-slate-100"></div>
         </div>
-        <section className="w-full bg-slate-900 ">
+        <section className="w-full ">
           {" "}
           <div className="mx-[20%] pt-10 ">
             <h1 className="pb-10 text-center text-6xl text-rose-300">
@@ -353,7 +343,7 @@ const Home: NextPage = () => {
             </div>
             <div className="h-24"></div>
           </div>
-          <div className="flex h-[6%] w-full flex-col items-center justify-center gap-2 bg-slate-900">
+          <div className="flex h-[6%] w-full flex-col items-center justify-center gap-2">
             <div className="flex w-full items-center justify-center gap-3">
               {/* <div className="w-[30%] border-t"></div> */}
               <a href="#home">
