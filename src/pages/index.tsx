@@ -457,7 +457,31 @@ const Home: NextPage = () => {
                     isMoved ? "border-slate-900" : "border-slate-50"
                   } px-2`}
                 >
-                  <img src={"../../../images/up-arrow.svg"} alt="Your SVG" />
+                  <svg version="1.1" id="Layer_1" viewBox="0 0 511.735 511.735">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <g id="SVGRepo_iconCarrier">
+                      {" "}
+                      <g>
+                        {" "}
+                        <g>
+                          {" "}
+                          <path
+                            className={`${
+                              isMoved
+                                ? "fill-slate-900 stroke-slate-900"
+                                : "fill-slate-50 stroke-slate-50"
+                            }`}
+                            d="M508.788,371.087L263.455,125.753c-4.16-4.16-10.88-4.16-15.04,0L2.975,371.087c-4.053,4.267-3.947,10.987,0.213,15.04 c4.16,3.947,10.667,3.947,14.827,0l237.867-237.76l237.76,237.76c4.267,4.053,10.987,3.947,15.04-0.213 C512.734,381.753,512.734,375.247,508.788,371.087z"
+                          />{" "}
+                        </g>{" "}
+                      </g>{" "}
+                    </g>
+                  </svg>
                 </button>
               </a>
               {/* <div className="w-[30%] border-t "></div> */}
@@ -471,7 +495,11 @@ const Home: NextPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={"../../../images/github.svg"} alt="Your SVG" />
+                    <img
+                      src={"../../../images/github.svg"}
+                      className="fill-slate-900 stroke-slate-900"
+                      alt="Your SVG"
+                    />
                   </a>
                 </button>
               </span>
