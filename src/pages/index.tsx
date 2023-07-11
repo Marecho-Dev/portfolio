@@ -3,11 +3,38 @@ import { type NextPage } from "next";
 import ContentCardLeft from "~/components/project-left";
 import { ContentCardRight } from "~/components/project-right";
 import { useInView } from "react-intersection-observer";
-import React, { useState } from "react";
-import lnSVG from "../../../images/in.svg";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useFormik } from "formik";
 
 const Home: NextPage = () => {
   const [isMoved, setIsMoved] = useState(false);
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+    onSubmit: (values) => {
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_SERVICE_ID,
+          process.env.NEXT_PUBLIC_TEMPLATE_ID,
+          values,
+          process.env.NEXT_PUBLIC_PUBLIC_KEY
+        )
+        .then(
+          (result) => {
+            alert("success");
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    },
+  });
+
   const handleButtonClick = () => {
     setIsMoved(!isMoved);
   };
@@ -474,38 +501,56 @@ const Home: NextPage = () => {
             <h1 className="pb-10 text-center text-6xl text-rose-300">
               Get in touch.
             </h1>
-            <div className="flex h-96 w-full flex-col items-center">
+            <form
+              onSubmit={formik.handleSubmit}
+              className="flex h-96 w-full flex-col items-center"
+            >
               <input
-                placeholder="Name"
+                placeholder="name"
+                id="name"
+                name="name"
                 className={` rounder-sm mb-10 w-full focus:border-2 ${
                   isMoved
                     ? "border border-rose-300 bg-slate-50 text-slate-900 outline-none"
                     : "bg-slate-200 text-slate-900"
                 } py-2 pl-2 text-lg md:w-1/3 `}
                 type="text"
+                onChange={formik.handleChange}
+                value={formik.values.name}
               />
               <input
+                id="email"
+                name="email"
+                type="email"
                 placeholder="Email"
                 className={` rounder-sm mb-10 w-full outline-none focus:border-2 ${
                   isMoved
                     ? "border border-rose-300 bg-slate-50  text-slate-900"
                     : "bg-slate-200 text-slate-900"
                 } py-2 pl-2 text-lg md:w-1/3 `}
-                type="text"
+                onChange={formik.handleChange}
+                value={formik.values.email}
               />
               <textarea
+                id="message"
+                name="message"
                 placeholder="Message"
                 className={`text-md min-h-1/2 w-full resize-y rounded-sm outline-none focus:border-2 ${
                   isMoved
                     ? "border border-rose-300 bg-slate-50 text-slate-900"
                     : "bg-slate-200 text-slate-900"
                 }  py-2 pl-2 md:w-1/3`}
+                onChange={formik.handleChange}
+                value={formik.values.message}
               ></textarea>
 
-              <button className="mt-5 w-[40%] rounded-md bg-rose-200 px-2 py-2 text-slate-700 md:w-[10%]">
+              <button
+                type="submit"
+                className="mt-5 rounded-md bg-rose-200 px-2 py-2 text-slate-700 md:w-[10%]"
+              >
                 Submit
               </button>
-            </div>
+            </form>
             <div className="h-24"></div>
           </div>
           <div className="flex h-[6%] w-full flex-col items-center justify-center gap-2">
