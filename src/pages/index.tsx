@@ -37,9 +37,9 @@ const Home: NextPage = () => {
     alternateJPG: "",
   };
   const mangaMoodAPI = {
-    title: "Manga Mood Restful API",
+    title: "MAL REC Restful API",
     summary:
-      "Restful API created using flask and python in order to perform machine learning on an input user to find mangas they should read next",
+      "Restful API created using flask and python in order to perform machine learning on an input user to find mangas they will most likely connect with based on their historical rating on the site myanimelist.net",
     tech: ["Python", "Flask", "Pandas"],
     jpg: "/images/MM-API.jpg",
     alternateJPG: "",
