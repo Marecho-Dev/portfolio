@@ -362,7 +362,7 @@ const Home: NextPage = () => {
         </div>
         <section className="lg:w-50% flex w-full gap-10 lg:min-h-[80vh]  ">
           <div className="flex flex-col items-center">
-            <div className=" w-full lg:w-[40%]">
+            <div className=" lg:w-[40%]">
               <h1
                 className={`mt-[10%] pb-2 text-center text-3xl ${
                   isMoved ? "text-rose-400" : "text-rose-300"
@@ -471,7 +471,7 @@ const Home: NextPage = () => {
                 placeholder="Name"
                 className={` rounder-sm mb-10 w-full ${
                   isMoved
-                    ? "bg-slate-600 text-slate-50"
+                    ? "border border-rose-300 bg-slate-50 text-slate-900"
                     : "bg-slate-200 text-slate-900"
                 } py-2 pl-2 text-lg md:w-1/3 `}
                 type="text"
@@ -480,7 +480,7 @@ const Home: NextPage = () => {
                 placeholder="Email"
                 className={` rounder-sm mb-10  w-full ${
                   isMoved
-                    ? "bg-slate-600 text-slate-50"
+                    ? "border border-rose-300 bg-slate-50 text-slate-900"
                     : "bg-slate-200 text-slate-900"
                 } py-2 pl-2 text-lg md:w-1/3 `}
                 type="text"
@@ -489,7 +489,7 @@ const Home: NextPage = () => {
                 placeholder="Message"
                 className={`text-md min-h-1/2 w-full resize-y rounded-sm ${
                   isMoved
-                    ? "bg-slate-600 text-slate-50"
+                    ? "border border-rose-300 bg-slate-50 text-slate-900"
                     : "bg-slate-200 text-slate-900"
                 }  py-2 pl-2 md:w-1/3`}
               ></textarea>
