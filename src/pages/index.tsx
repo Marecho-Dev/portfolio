@@ -81,11 +81,13 @@ const Home: NextPage = () => {
         style={{
           WebkitTapHighlightColor: "transparent",
         }}
-        className="focus:box-shadow-none! focus:outline-none! focus:ring-0! absolute right-2 top-2 h-[5%] w-[15%] rounded-full bg-slate-800 md:h-[2%] md:w-[2%]"
+        className={`focus:box-shadow-none! focus:outline-none! focus:ring-0! absolute right-2 top-2 h-[5%] w-[15%] rounded-full ${
+          isMoved ? "bg-slate-200" : "bg-slate-800"
+        } md:h-[2%] md:w-[2%]`}
       >
         <div
-          className={`ml-2 h-[60%] w-[30%] rounded-full bg-slate-50 ${
-            isMoved ? "ml-auto mr-2" : ""
+          className={`ml-2 h-[60%] w-[30%] rounded-full  ${
+            isMoved ? "ml-auto mr-2 bg-amber-400" : "bg-slate-200"
           }`}
         ></div>
       </button>
