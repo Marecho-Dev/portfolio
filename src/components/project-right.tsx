@@ -39,13 +39,13 @@ export const ContentCardRight = (contentCard: contentCard) => {
         </div>
       </div>
       <div className="bottom-0 right-[0%] h-[full] w-[100%] flex-col border bg-slate-900 opacity-[.95] md:right-[0%] lg:absolute lg:right-[5%] lg:top-20 lg:w-[60vh] lg:bg-inherit lg:opacity-100 2xl:right-[20%] 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh]">
-        <div className="flex items-center justify-center pr-5  text-2xl text-slate-200 lg:justify-end 3xl:text-3xl">
+        <div className="flex items-center justify-center pr-5  text-lg text-slate-200 md:text-2xl lg:justify-end 3xl:text-3xl">
           <h1>{contentCard.title}</h1>
         </div>
         <div className="mt-3 w-full overflow-auto p-5 text-xs text-slate-50 lg:max-h-[65%] lg:bg-slate-200 lg:text-slate-900 2xl:text-base">
           {contentCard.summary}
         </div>
-        <div className="flex items-center justify-center gap-2 text-lg  lg:justify-end">
+        <div className="flex items-center justify-center gap-2 text-xs md:text-lg  lg:justify-end">
           {contentCard.tech.map((technology, index) => {
             return (
               <div key={index} className="px-2 py-1 text-slate-200">
