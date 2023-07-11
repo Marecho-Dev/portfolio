@@ -21,7 +21,7 @@ export const ContentCardRight = (contentCard: contentCard) => {
         inView ? "animate-slide-in-left opacity-100" : "opacity-0"
       } mx-[20%] min-h-[50vh] flex-col pt-10 font-mono  md:flex md:h-[50vh]`}
     >
-      <div className="h-full border md:w-[100vh] lg:w-[50%]">
+      <div className="h-full border md:w-[100vh] md:border-none lg:w-[50%]">
         <div className="relative h-full w-full">
           <img
             src={`${contentCard.jpg}`}
@@ -38,7 +38,7 @@ export const ContentCardRight = (contentCard: contentCard) => {
           )}
         </div>
       </div>
-      <div className="bottom-0 right-[0%] h-[full] w-[100%] flex-col border bg-slate-900 opacity-[.95] md:right-[0%] lg:absolute lg:right-[5%] lg:top-20 lg:w-[60vh] lg:bg-inherit lg:opacity-100 2xl:right-[20%] 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh]">
+      <div className="bottom-0 right-[0%] h-[full] w-[100%] flex-col border bg-slate-900 opacity-[.95] md:right-[0%] md:border-none lg:absolute lg:right-[5%] lg:top-20 lg:w-[60vh] lg:bg-inherit lg:opacity-100 2xl:right-[20%] 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh]">
         <div className="flex items-center justify-center pr-5  text-lg text-slate-200 md:text-2xl lg:justify-end 3xl:text-3xl">
           <h1>{contentCard.title}</h1>
         </div>

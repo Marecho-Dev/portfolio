@@ -21,7 +21,7 @@ export const ContentCardLeft = (contentCard: contentCard) => {
         inView ? "animate-slide-in-right opacity-100" : "opacity-0"
       } mx-[20%] flex grid min-h-[50vh] grid-cols-1 grid-rows-2 justify-end pt-10 font-mono md:flex md:h-[50vh] md:flex-row`}
     >
-      <div className="bottom-0 left-[0%] z-10 row-span-1 row-start-2 h-[100%] w-[100%] flex-col border opacity-[.95] md:absolute md:bg-slate-900 lg:left-[5%] lg:top-20 lg:w-[60vh] lg:bg-inherit lg:opacity-100 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh]">
+      <div className="bottom-0 left-[0%] z-10 row-span-1 row-start-2 h-[100%] w-[100%] flex-col border opacity-[.95] md:absolute md:border-none md:bg-slate-900 lg:left-[5%] lg:top-20 lg:w-[60vh] lg:bg-inherit lg:opacity-100 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh]">
         <div className="flex items-center justify-center pr-5 text-lg text-slate-200 md:text-3xl lg:justify-start">
           <h1>{contentCard.title}</h1>
         </div>
@@ -38,7 +38,7 @@ export const ContentCardLeft = (contentCard: contentCard) => {
           })}
         </div>
       </div>
-      <div className="row-span-1 row-start-1 h-full border md:w-[100vh] lg:w-1/2">
+      <div className="row-span-1 row-start-1 h-full border md:w-[100vh] md:border-none lg:w-1/2">
         <div className="relative h-full w-full rounded-sm">
           <img
             src={`${contentCard.jpg}`}
