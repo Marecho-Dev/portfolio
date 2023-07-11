@@ -1,38 +1,61 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable react/no-unescaped-entities */
 import { type NextPage } from "next";
 import ContentCardLeft from "~/components/project-left";
 import { ContentCardRight } from "~/components/project-right";
 import { useInView } from "react-intersection-observer";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
+import * as Yup from "yup";
+import { FormikHelpers } from "formik";
 
+interface FormValues {
+  name: string;
+  email: string;
+  message: string;
+}
 const Home: NextPage = () => {
   const [isMoved, setIsMoved] = useState(false);
+  const [buttonState, setButtonState] = useState("Send Message");
+  const onSubmit = async (
+    values: FormValues,
+    { setSubmitting, resetForm }: FormikHelpers<any>
+  ) => {
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID ?? "",
+        process.env.NEXT_PUBLIC_TEMPLATE_ID ?? "",
+        values as unknown as Record<string, unknown>,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
+      );
+      alert("success");
+      setButtonState("Send Email");
+      resetForm();
+    } catch {
+      setButtonState("Send Email");
+    } finally {
+      setSubmitting(false);
+    }
+  };
   const formik = useFormik({
     initialValues: {
       name: "",
       email: "",
       message: "",
     },
-    onSubmit: (values) => {
-      emailjs
-        .send(
-          process.env.NEXT_PUBLIC_SERVICE_ID,
-          process.env.NEXT_PUBLIC_TEMPLATE_ID,
-          values,
-          process.env.NEXT_PUBLIC_PUBLIC_KEY
-        )
-        .then(
-          (result) => {
-            alert("success");
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-    },
+    validationSchema: Yup.object().shape({
+      name: Yup.string()
+        .min(2, "Too Short!")
+        .max(50, "Too Long!")
+        .required("* Name field is required"),
+      message: Yup.string()
+        .min(2, "Too Short!")
+        .max(250, "Too Long!")
+        .required("Required"),
+      email: Yup.string().email("Invalid email").required("Required"),
+    }),
+    onSubmit,
   });
 
   const handleButtonClick = () => {
