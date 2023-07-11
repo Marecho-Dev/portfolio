@@ -259,7 +259,13 @@ const Home: NextPage = () => {
                 <span
                   className={`${isMoved ? "text-pink-400" : "text-pink-200"}`}
                 >
-                  @AutoNation
+                  <a
+                    href="https://www.autonation.com/reputation-award-winners"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @AutoNation
+                  </a>
                 </span>
                 . Passionate about react, machine learning, music and manga.
               </p>
