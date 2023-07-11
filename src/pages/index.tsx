@@ -105,8 +105,8 @@ const Home: NextPage = () => {
   };
 
   const { ref: skillsSectionRef, inView: skillsInView } = useInView({
-    threshold: 0.2,
-    rootMargin: "-100px 0px -300px 0px", // Adjust root margin as needed
+    threshold: 0,
+    rootMargin: "0px 0px 0px 0px", // Adjust root margin as needed
   });
 
   const { ref: aboutSectionRef, inView: aboutInView } = useInView({
