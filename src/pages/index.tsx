@@ -70,6 +70,7 @@ const Home: NextPage = () => {
     <div id="home" className="relative h-screen bg-slate-900 font-mono">
       <button
         onClick={handleButtonClick}
+        style={{ userSelect: "none" }}
         className="absolute right-2 top-2 h-[5%] w-[15%] rounded-full bg-slate-800 md:h-[2%] md:w-[2%]"
       >
         <div
