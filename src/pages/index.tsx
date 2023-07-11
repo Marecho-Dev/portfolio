@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { FormikHelpers } from "formik";
+import type { FormikHelpers } from "formik";
 
 interface FormValues {
   name: string;
