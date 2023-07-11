@@ -366,7 +366,7 @@ const Home: NextPage = () => {
                   </button>
                   <button className="aspect-square h-10 w-10 ">
                     <a
-                      href="https://www.linkedin.com/in/marek-staszkiewicz-022358123/"
+                      href="https://www.linkedin.com/in/marek-staszkiewicz93/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -405,7 +405,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="flex w-full justify-center gap-2 pt-5">
                   <a
-                    href="../../../images/Marek Staszkiewicz Resume.pdf"
+                    href="../../../images/marek_staszkiewicz_resume.pdf"
                     download
                   >
                     <button
@@ -555,7 +555,11 @@ const Home: NextPage = () => {
           <section className="w-full ">
             {" "}
             <div className="mx-[20%] pt-10 ">
-              <h1 className="pb-10 text-center text-6xl text-rose-300">
+              <h1
+                className={`pb-10 text-center text-6xl ${
+                  isMoved ? "text-slate-900" : "text-rose-300"
+                }`}
+              >
                 Get in touch.
               </h1>
               <form
@@ -603,7 +607,11 @@ const Home: NextPage = () => {
 
                 <button
                   type="submit"
-                  className="mt-5 rounded-md bg-rose-200 px-2 py-2 text-slate-700 md:w-[10%]"
+                  className={`mt-5 rounded-md ${
+                    isMoved
+                      ? "border border-rose-300 bg-slate-50 text-slate-900"
+                      : "bg-rose-200 text-slate-700"
+                  } px-2 py-2 md:w-[10%]`}
                 >
                   Submit
                 </button>
