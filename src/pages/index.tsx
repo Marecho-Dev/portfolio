@@ -4,6 +4,7 @@ import ContentCardLeft from "~/components/project-left";
 import { ContentCardRight } from "~/components/project-right";
 import { useInView } from "react-intersection-observer";
 import React, { useState } from "react";
+import lnSVG from "../../../images/in.svg";
 
 const Home: NextPage = () => {
   const [isMoved, setIsMoved] = useState(false);
@@ -271,7 +272,23 @@ const Home: NextPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={"../../../images/github.svg"} alt="Your SVG" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      data-name="Layer 2"
+                      className={` ${
+                        isMoved
+                          ? "fill-slate-50 stroke-slate-900"
+                          : "stroke-slate-50"
+                      }`}
+                      viewBox="0 0 48 48"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M24 2.5a21.5 21.5 0 0 0-6.8 41.9c1.08.2 1.47-.46 1.47-1v-3.65c-6 1.3-7.24-2.88-7.24-2.88A5.7 5.7 0 0 0 9 33.68c-1.95-1.33.15-1.31.15-1.31a4.52 4.52 0 0 1 3.29 2.22c1.92 3.29 5 2.34 6.26 1.79a4.61 4.61 0 0 1 1.37-2.88c-4.78-.54-9.8-2.38-9.8-10.62a8.29 8.29 0 0 1 2.22-5.77 7.68 7.68 0 0 1 .21-5.69s1.8-.58 5.91 2.2a20.46 20.46 0 0 1 10.76 0c4.11-2.78 5.91-2.2 5.91-2.2a7.74 7.74 0 0 1 .21 5.69 8.28 8.28 0 0 1 2.21 5.77c0 8.26-5 10.07-9.81 10.61a5.12 5.12 0 0 1 1.46 4v5.9c0 .71.39 1.24 1.48 1A21.5 21.5 0 0 0 24 2.5"
+                      />
+                    </svg>
                   </a>
                 </button>
                 <button className="aspect-square h-10 w-10 ">
@@ -280,12 +297,33 @@ const Home: NextPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={"../../../images/in.svg"} alt="Your SVG" />
+                    {isMoved && (
+                      <img src={"../../../images/in-dark.svg"} alt="Your SVG" />
+                    )}
+                    {!isMoved && (
+                      <img
+                        src={"../../../images/in-light.svg"}
+                        alt="Your SVG"
+                      />
+                    )}
                   </a>
                 </button>
-                <button className="flex aspect-square h-10 w-10 items-end ">
+                <button className="flex aspect-square items-end ">
                   <a href="mailto:marekstaszkiewicz@live.com">
-                    <img src={"../../../images/mail.svg"} alt="Your SVG" />
+                    <svg
+                      viewBox="0 0 48 48"
+                      className={`h-10 w-10 ${
+                        isMoved
+                          ? "fill-slate-50 stroke-slate-900"
+                          : "fill-slate-900 stroke-slate-50"
+                      }`}
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6.47,10.71a2,2,0,0,0-2,2h0V35.32a2,2,0,0,0,2,2H41.53a2,2,0,0,0,2-2h0V12.68a2,2,0,0,0-2-2H6.47Zm33.21,3.82L24,26.07,8.32,14.53"
+                      />
+                    </svg>
                   </a>
                 </button>
               </div>
@@ -366,7 +404,21 @@ const Home: NextPage = () => {
                     className="my-5 flex h-14 w-14 flex-col items-center justify-center 3xl:h-24 3xl:w-24"
                   >
                     <div>
-                      <img src={`../../../images/${skill}.svg`} alt={skill} />
+                      {skill == "Flask" && isMoved && (
+                        <img
+                          src={`../../../images/${skill}-dark.svg`}
+                          alt={skill}
+                        />
+                      )}
+                      {skill == "Flask" && !isMoved && (
+                        <img
+                          src={`../../../images/${skill}-light.svg`}
+                          alt={skill}
+                        />
+                      )}
+                      {skill != "Flask" && (
+                        <img src={`../../../images/${skill}.svg`} alt={skill} />
+                      )}
                     </div>
                     <div className="text-center text-xs ">{skill}</div>
                   </div>
@@ -495,11 +547,23 @@ const Home: NextPage = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={"../../../images/github.svg"}
-                      className="fill-slate-900 stroke-slate-900"
-                      alt="Your SVG"
-                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      data-name="Layer 2"
+                      className={`h-5 ${
+                        isMoved
+                          ? "fill-slate-50 stroke-slate-900"
+                          : "stroke-slate-50"
+                      }`}
+                      viewBox="0 0 48 48"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M24 2.5a21.5 21.5 0 0 0-6.8 41.9c1.08.2 1.47-.46 1.47-1v-3.65c-6 1.3-7.24-2.88-7.24-2.88A5.7 5.7 0 0 0 9 33.68c-1.95-1.33.15-1.31.15-1.31a4.52 4.52 0 0 1 3.29 2.22c1.92 3.29 5 2.34 6.26 1.79a4.61 4.61 0 0 1 1.37-2.88c-4.78-.54-9.8-2.38-9.8-10.62a8.29 8.29 0 0 1 2.22-5.77 7.68 7.68 0 0 1 .21-5.69s1.8-.58 5.91 2.2a20.46 20.46 0 0 1 10.76 0c4.11-2.78 5.91-2.2 5.91-2.2a7.74 7.74 0 0 1 .21 5.69 8.28 8.28 0 0 1 2.21 5.77c0 8.26-5 10.07-9.81 10.61a5.12 5.12 0 0 1 1.46 4v5.9c0 .71.39 1.24 1.48 1A21.5 21.5 0 0 0 24 2.5"
+                      />
+                    </svg>
                   </a>
                 </button>
               </span>
