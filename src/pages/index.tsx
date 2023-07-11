@@ -70,7 +70,7 @@ const Home: NextPage = () => {
     <div id="home" className="relative h-screen bg-slate-900 font-mono">
       <button
         onClick={handleButtonClick}
-        className="focus:box-shadow-none absolute right-2 top-2 h-[5%] w-[15%] cursor-pointer rounded-full bg-slate-800 focus:outline-none focus:ring-0 md:h-[2%] md:w-[2%]"
+        className="focus:box-shadow-none! focus:outline-none! focus:ring-0! absolute right-2 top-2 h-[5%] w-[15%] rounded-full bg-slate-800 md:h-[2%] md:w-[2%]"
       >
         <div
           className={`ml-2 h-[60%] w-[30%] rounded-full bg-slate-50 ${
