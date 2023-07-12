@@ -366,7 +366,7 @@ const Home: NextPage = () => {
                   </button>
                   <button className="aspect-square h-10 w-10 ">
                     <a
-                      href="https://www.linkedin.com/in/marek-staszkiewicz93/"
+                      href="https://www.linkedin.com/in/marekstaszkiewicz93/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
