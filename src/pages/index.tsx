@@ -341,7 +341,7 @@ const Home: NextPage = () => {
                 <div className="flex w-full justify-center gap-2 pt-5">
                   <button className="aspect-square h-10 w-10">
                     <a
-                      href="https://github.com/mareks1993"
+                      href="https://github.com/Marecho-dev"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
