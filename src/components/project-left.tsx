@@ -50,10 +50,11 @@ export const ContentCardLeft = (contentCard: contentCard) => {
       ref={ref}
       className={`w-80% relative transition-opacity duration-2000 ${
         inView ? "animate-slide-in-right opacity-100" : "opacity-0"
-      } mx-[20%] flex grid min-h-[50vh] grid-cols-1 grid-rows-2 justify-end pt-10 font-mono md:flex md:h-[50vh] md:flex-row`}
+      } mx-[20%] grid min-h-[50vh] grid-cols-1 grid-rows-2 justify-end pt-10 font-mono md:flex md:h-[50vh] md:flex-row`}
+      style={{ gridTemplateRows: "auto 1fr" }}
     >
       <div
-        className={` bottom-0 left-[0%] z-10 row-span-1 row-start-2 h-full w-[100%] flex-col border opacity-[.95] md:absolute md:border-none  lg:left-[5%] lg:top-20 lg:w-[60vh] lg:opacity-100 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh] ${
+        className={` bottom-0 left-[0%] z-10 row-span-1 row-start-2 w-[100%] flex-col border opacity-[.95] md:absolute md:border-none  lg:left-[5%] lg:top-20 lg:w-[60vh] lg:opacity-100 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh] ${
           contentCard.isMoved ? "border-slate-900" : "border-slate-50"
         }`}
       >
@@ -65,7 +66,7 @@ export const ContentCardLeft = (contentCard: contentCard) => {
           <h1>{contentCard.title}</h1>
         </div>
         <div
-          className={`mt-3 min-h-[30%] w-full overflow-auto p-5 text-xs ${
+          className={`mt-3 w-full overflow-auto p-5 text-xs ${
             contentCard.isMoved
               ? "text-slate-900 lg:bg-slate-700 lg:text-slate-50"
               : "text-slate-50 lg:bg-slate-200 lg:text-slate-800 "
