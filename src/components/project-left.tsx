@@ -59,7 +59,7 @@ export const ContentCardLeft = (contentCard: contentCard) => {
         </div>
       </div>
       <div
-        className={`row-span-1 row-start-1 h-full border md:w-[100vh] md:border-none lg:w-1/2 ${
+        className={`row-span-1 row-start-1 h-full border md:w-[100vh] md:border-none lg:w-[70%] ${
           contentCard.isMoved ? "border-slate-900 " : "border-slate-50"
         }`}
       >

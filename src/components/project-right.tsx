@@ -23,7 +23,7 @@ export const ContentCardRight = (contentCard: contentCard) => {
       } mx-[20%] min-h-[50vh] flex-col pt-10 font-mono  md:flex md:h-[50vh]`}
     >
       <div
-        className={`h-full border md:w-[100vh] md:border-none lg:w-[50%] ${
+        className={`h-full border md:w-[100vh] md:border-none lg:w-[65%] ${
           contentCard.isMoved ? "border-slate-900" : "border-slate-50"
         }`}
       >
