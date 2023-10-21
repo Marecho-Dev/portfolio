@@ -10,7 +10,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import type { FormikHelpers } from "formik";
 import toast, { Toaster } from "react-hot-toast";
-
+import TypeIt from "typeit-react";
 interface FormValues {
   name: string;
   email: string;
@@ -308,16 +308,15 @@ const Home: NextPage = () => {
             <div className="w-full flex-col items-center justify-center">
               <h1 className="px-1 pb-2 text-4xl  lg:text-9xl">Hi, I'm Marek</h1>
               <div className="flex items-center">
-                <h2 className="animate-typewriter text-1xl m-auto overflow-hidden whitespace-nowrap pb-3 tracking-tighter  lg:text-6xl">
-                  <p>
+                <h2 className="text-1xl m-auto pb-3 lg:text-6xl">
+                  <TypeIt
+                    options={{
+                      speed: 50,
+                      lifeLike: true,
+                    }}
+                  >
                     Full Stack Developer
-                    <span
-                      className={`animate-blink-caret h-2/3 border ${
-                        isMoved ? "border-slate-900" : "border-slate-50"
-                      } text-4xl lg:h-full lg:border-2`}
-                      style={{ height: "80%", marginTop: 0 }}
-                    ></span>
-                  </p>
+                  </TypeIt>
                 </h2>
               </div>
               <div className="flex w-full items-center justify-center">
