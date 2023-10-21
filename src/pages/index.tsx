@@ -87,13 +87,13 @@ const Home: NextPage = () => {
     alternateJPG: "/images/Animation.gif",
   };
 
-  const personalPortfolio = {
-    title: "Personal Portfolio",
+  const shoppingCart = {
+    title: "Shopping Cart",
     summary:
-      "Personal portfolio which is built with React, TypeScript, and Tailwind. Uses the Formik and EmailJS libraries in order to handle contact form validation and submission. Hot-react-toast is used for error/success messages!",
-    tech: ["React", "TypeScript", "Tailwind"],
-    jpg: "/images/portfolio-pic-3.jpg",
-    alternateJPG: "/images/portfolio-gif.gif",
+      "Video game retailer site which is built with React, TypeScript, Mantine and Vite. Connects to https://rawg.io/apidocs api to fetch games and genres!",
+    tech: ["React", "TypeScript", "Mantine", Vite],
+    jpg: "/images/ShoppingCart.jpg",
+    alternateJPG: "/images/ShoppingCart.gif",
   };
   const mangaMoodAPI = {
     title: "MAL REC Restful API",
@@ -533,9 +533,9 @@ const Home: NextPage = () => {
               {/* this next part is the project with card on right side */}
               <ContentCardRight {...mangaMood} isMoved={isMoved} />
               {/* this is project with card on left side */}
-              <ContentCardLeft {...mangaMoodAPI} isMoved={isMoved} />
+              <ContentCardLeft {...shoppingCart} isMoved={isMoved} />
               {/* this is end of project with card on left side */}
-              <ContentCardRight {...personalPortfolio} isMoved={isMoved} />
+              <ContentCardRight {...mangaMoodAPI} isMoved={isMoved} />
               {/* this is end of project with card on right side */}
             </section>
           </div>
