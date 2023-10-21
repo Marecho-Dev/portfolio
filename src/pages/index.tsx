@@ -85,6 +85,8 @@ const Home: NextPage = () => {
     tech: ["React", "TypeScript", "Tailwind", "NextJS", "Zustand"],
     jpg: "/images/MM.jpg",
     alternateJPG: "/images/Animation.gif",
+    live: "https://manga-mood.vercel.app/",
+    repo: "https://github.com/Marecho-Dev/manga-mood",
   };
 
   const shoppingCart = {
@@ -94,6 +96,8 @@ const Home: NextPage = () => {
     tech: ["React", "TypeScript", "Mantine", "Vite"],
     jpg: "/images/ShoppingCart.jpg",
     alternateJPG: "/images/ShoppingCart.gif",
+    live: "https://tiny-lollipop-56d5ff.netlify.app/",
+    repo: "https://github.com/Marecho-Dev/odin-shopping-cart",
   };
   const mangaMoodAPI = {
     title: "MAL REC Restful API",
@@ -102,6 +106,8 @@ const Home: NextPage = () => {
     tech: ["Python", "Flask", "Pandas"],
     jpg: "/images/MM-API.jpg",
     alternateJPG: "",
+    live: "",
+    repo: "https://github.com/Marecho-Dev/manga-restful-recommendations",
   };
 
   const { ref: skillsSectionRef, inView: skillsInView } = useInView({

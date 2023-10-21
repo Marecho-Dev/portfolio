@@ -1,4 +1,6 @@
 import { useInView } from "react-intersection-observer";
+import React, { useRef, useState, useEffect } from "react";
+import Marquee from "react-fast-marquee";
 
 type contentCard = {
   title: string;
@@ -7,10 +9,38 @@ type contentCard = {
   jpg: string;
   alternateJPG: string;
   isMoved: boolean;
+  repo: string;
+  live: string;
 };
 
 /* eslint-disable react/no-unescaped-entities */
 export const ContentCardLeft = (contentCard: contentCard) => {
+  const techContainerRef = useRef<HTMLDivElement>(null);
+  const techContentRef = useRef<HTMLDivElement>(null);
+  const [techOverflowing, setTechOverflowing] = useState(false);
+  useEffect(() => {
+    const container = techContainerRef.current;
+    const content = techContentRef.current;
+
+    if (container && content) {
+      setTechOverflowing(content.scrollWidth > container.clientWidth);
+    }
+  }, [contentCard.tech]);
+
+  const TechListContent = () => (
+    <div ref={techContentRef} className="flex gap-2">
+      {contentCard.tech.map((technology, index) => (
+        <div
+          key={index}
+          className={`px-2 py-1 ${
+            contentCard.isMoved ? "lg:text-slate-900" : "lg:text-slate-900"
+          }`}
+        >
+          [{technology}]
+        </div>
+      ))}
+    </div>
+  );
   const { ref, inView } = useInView({
     threshold: 0, // Trigger when 20% of the card is visible
   });
@@ -23,7 +53,7 @@ export const ContentCardLeft = (contentCard: contentCard) => {
       } mx-[20%] flex grid min-h-[50vh] grid-cols-1 grid-rows-2 justify-end pt-10 font-mono md:flex md:h-[50vh] md:flex-row`}
     >
       <div
-        className={`bottom-0 left-[0%] z-10 row-span-1 row-start-2 h-[100%] w-[100%] flex-col border opacity-[.95] md:absolute md:border-none  lg:left-[5%] lg:top-20 lg:w-[60vh] lg:opacity-100 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh] ${
+        className={`relative bottom-0 left-[0%] z-10 row-span-1 row-start-2 h-full w-[100%] flex-col border opacity-[.95] md:absolute md:border-none  lg:left-[5%] lg:top-20 lg:w-[60vh] lg:opacity-100 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh] ${
           contentCard.isMoved ? "border-slate-900" : "border-slate-50"
         }`}
       >
@@ -42,20 +72,42 @@ export const ContentCardLeft = (contentCard: contentCard) => {
           } 2xl:text-base`}
         >
           {contentCard.summary}
-        </div>
-        <div className="flex items-center justify-center gap-2 text-xs md:text-lg  lg:justify-start">
-          {contentCard.tech.map((technology, index) => {
-            return (
-              <div
-                key={index}
-                className={`px-2 py-1 ${
-                  contentCard.isMoved ? "text-slate-900" : "text-slate-200"
-                }`}
+          <div className="flex gap-2 text-blue-400">
+            <button className="flex items-center gap-2">
+              <a
+                href={contentCard.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-600"
               >
-                {technology}
-              </div>
-            );
-          })}
+                [Repo]
+              </a>
+            </button>
+            {contentCard.live && (
+              <button className="flex items-center gap-2">
+                <a
+                  href={contentCard.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:text-blue-600"
+                >
+                  [Live]
+                </a>
+              </button>
+            )}
+          </div>
+        </div>
+        <div
+          ref={techContainerRef}
+          className="align-center absolute bottom-0 flex items-center gap-2 text-center text-xs md:absolute md:text-lg lg:relative  lg:justify-end lg:bg-slate-200"
+        >
+          {techOverflowing ? (
+            <Marquee speed={50}>
+              <TechListContent />
+            </Marquee>
+          ) : (
+            <TechListContent />
+          )}
         </div>
       </div>
       <div

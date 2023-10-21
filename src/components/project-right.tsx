@@ -1,4 +1,6 @@
 import { useInView } from "react-intersection-observer";
+import React, { useRef, useState, useEffect } from "react";
+import Marquee from "react-fast-marquee";
 
 type contentCard = {
   title: string;
@@ -7,10 +9,39 @@ type contentCard = {
   jpg: string;
   alternateJPG: string;
   isMoved: boolean;
+  repo: string;
+  live: string;
 };
 
 /* eslint-disable react/no-unescaped-entities */
 export const ContentCardRight = (contentCard: contentCard) => {
+  const techContainerRef = useRef<HTMLDivElement>(null);
+  const techContentRef = useRef<HTMLDivElement>(null);
+  const [techOverflowing, setTechOverflowing] = useState(false);
+  useEffect(() => {
+    const container = techContainerRef.current;
+    const content = techContentRef.current;
+
+    if (container && content) {
+      setTechOverflowing(content.scrollWidth > container.clientWidth);
+    }
+  }, [contentCard.tech]);
+
+  const TechListContent = () => (
+    <div ref={techContentRef} className="flex gap-2">
+      {contentCard.tech.map((technology, index) => (
+        <div
+          key={index}
+          className={`px-2 py-1 ${
+            contentCard.isMoved ? "lg:text-slate-900" : "lg:text-slate-900"
+          }`}
+        >
+          [{technology}]
+        </div>
+      ))}
+    </div>
+  );
+
   const { ref, inView } = useInView({
     threshold: 0, // Trigger when 20% of the card is visible
   });
@@ -63,20 +94,42 @@ export const ContentCardRight = (contentCard: contentCard) => {
           } lg:max-h-[65%]   2xl:text-base`}
         >
           {contentCard.summary}
-        </div>
-        <div className="flex items-center justify-center gap-2 text-xs md:text-lg  lg:justify-end">
-          {contentCard.tech.map((technology, index) => {
-            return (
-              <div
-                key={index}
-                className={`px-2 py-1 ${
-                  contentCard.isMoved ? "text-slate-900" : "text-slate-200"
-                }`}
+          <div className="flex gap-2 text-blue-400">
+            <button className="flex items-center gap-2">
+              <a
+                href={contentCard.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-600"
               >
-                {technology}
-              </div>
-            );
-          })}
+                [Repo]
+              </a>
+            </button>
+            {contentCard.live && (
+              <button className="flex items-center gap-2">
+                <a
+                  href={contentCard.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:text-blue-600"
+                >
+                  [Live]
+                </a>
+              </button>
+            )}
+          </div>
+        </div>
+        <div
+          ref={techContainerRef}
+          className="flex items-center justify-center gap-2 text-xs md:text-lg  lg:justify-end lg:bg-slate-200"
+        >
+          {techOverflowing ? (
+            <Marquee speed={50}>
+              <TechListContent />
+            </Marquee>
+          ) : (
+            <TechListContent />
+          )}
         </div>
       </div>
     </div>
