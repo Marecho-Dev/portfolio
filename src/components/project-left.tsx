@@ -99,7 +99,7 @@ export const ContentCardLeft = (contentCard: contentCard) => {
         </div>
         <div
           ref={techContainerRef}
-          className="align-center bottom-0 flex items-center gap-2 text-center text-xs md:text-lg   lg:justify-end lg:bg-slate-200"
+          className="align-center bottom-0 flex items-center justify-center gap-2 text-xs md:text-lg   lg:justify-end lg:bg-slate-200"
         >
           {techOverflowing ? (
             <Marquee speed={50}>
