@@ -149,19 +149,17 @@ const Home: NextPage = () => {
         {/* absolute light/dark pill toggle */}
         <button
           onClick={handleButtonClick}
-          style={{
-            WebkitTapHighlightColor: "transparent",
-          }}
-          className={`focus:box-shadow-none! focus:outline-none! focus:ring-0! absolute right-2 top-2 h-[5%] w-[15%] rounded-full ${
+          className={`absolute right-2 top-2 transform rounded-full transition-transform hover:scale-105 focus:outline-none focus:ring-0 ${
             isMoved ? "bg-slate-200" : "bg-slate-800"
-          } md:h-[2%] md:w-[2%]`}
+          } h-8 w-16`}
         >
           <div
-            className={`ml-2 h-[60%] w-[30%] rounded-full  ${
-              isMoved ? "ml-auto mr-2 bg-amber-400" : "bg-slate-200"
-            }`}
+            className={`transform rounded-full transition-all duration-200 ${
+              isMoved ? "ml-auto mr-2 bg-amber-400" : "ml-2 bg-slate-200"
+            } h-6 w-6`}
           ></div>
         </button>
+
         {/* fixed nav panel left side of page */}
         <div className="fixed left-0 hidden h-full lg:block  ">
           <div className="ml-5 flex h-full w-full items-center justify-center">
