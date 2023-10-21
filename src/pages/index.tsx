@@ -91,7 +91,7 @@ const Home: NextPage = () => {
     title: "Shopping Cart",
     summary:
       "Video game retailer site which is built with React, TypeScript, Mantine and Vite. Connects to https://rawg.io/apidocs api to fetch games and genres!",
-    tech: ["React", "TypeScript", "Mantine", Vite],
+    tech: ["React", "TypeScript", "Mantine", "Vite"],
     jpg: "/images/ShoppingCart.jpg",
     alternateJPG: "/images/ShoppingCart.gif",
   };
