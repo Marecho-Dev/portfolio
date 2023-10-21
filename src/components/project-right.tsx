@@ -80,7 +80,7 @@ export const ContentCardRight = (contentCard: contentCard) => {
         } opacity-[.95] md:right-[0%] md:border-none lg:absolute lg:right-[5%] lg:top-20 lg:w-[60vh] lg:bg-inherit lg:opacity-100 2xl:right-[20%] 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh]`}
       >
         <div
-          className={`flex items-center justify-center pr-5  text-lg ${
+          className={`flex items-center justify-center text-lg  lg:pr-5 ${
             contentCard.isMoved ? "text-slate-800" : "text-slate-200"
           } md:text-2xl lg:justify-end 3xl:text-3xl`}
         >
