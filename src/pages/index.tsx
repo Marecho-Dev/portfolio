@@ -81,7 +81,7 @@ const Home: NextPage = () => {
   const mangaMood = {
     title: "Manga Mood",
     summary:
-      "Manga Mood is a full-stack SPA built using the T3 stack. It utilizes Machine Learning via a RESTful API in order to generate manga recommendations by comparing what you've rated on myanimelist to what other users have rated. If you don't have a myanimelist username, please use 'marecho' to test it out! Still a work in progress and I have long term plans for this project, but manga recommendations is functioning!",
+      "Manga Mood is a full-stack SPA built using the T3 stack. It utilizes Machine Learning via a RESTful API in order to generate manga recommendations by comparing what you've rated on myanimelist to what other users have rated. If you don't have a myanimelist username, please use 'marecho' to test it out! Still a work in progress and I have long term plans for this project, but manga recommendations are functioning!",
     tech: ["React", "TypeScript", "Tailwind", "NextJS", "Zustand"],
     jpg: "/images/MM.jpg",
     alternateJPG: "/images/Animation.gif",
