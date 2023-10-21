@@ -53,7 +53,7 @@ export const ContentCardLeft = (contentCard: contentCard) => {
       } mx-[20%] flex grid min-h-[50vh] grid-cols-1 grid-rows-2 justify-end pt-10 font-mono md:flex md:h-[50vh] md:flex-row`}
     >
       <div
-        className={`relative bottom-0 left-[0%] z-10 row-span-1 row-start-2 h-full w-[100%] flex-col border opacity-[.95] md:absolute md:border-none  lg:left-[5%] lg:top-20 lg:w-[60vh] lg:opacity-100 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh] ${
+        className={` bottom-0 left-[0%] z-10 row-span-1 row-start-2 h-full w-[100%] flex-col border opacity-[.95] md:absolute md:border-none  lg:left-[5%] lg:top-20 lg:w-[60vh] lg:opacity-100 2xl:w-1/3 3xl:right-[6%] 3xl:w-[60vh] ${
           contentCard.isMoved ? "border-slate-900" : "border-slate-50"
         }`}
       >
@@ -99,7 +99,7 @@ export const ContentCardLeft = (contentCard: contentCard) => {
         </div>
         <div
           ref={techContainerRef}
-          className="align-center absolute bottom-0 flex items-center gap-2 text-center text-xs md:absolute md:text-lg lg:relative  lg:justify-end lg:bg-slate-200"
+          className="align-center bottom-0 flex items-center gap-2 text-center text-xs md:text-lg   lg:justify-end lg:bg-slate-200"
         >
           {techOverflowing ? (
             <Marquee speed={50}>
